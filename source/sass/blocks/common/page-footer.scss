@@ -1,0 +1,20 @@
+.page-footer {
+  background-color: $gray;
+}
+
+.page-footer__copyright-name {
+  font-family: $arial;
+  font-size: 16px;
+  padding-top: 21px;
+  padding-bottom: 20px;
+  color: $dark-gray;
+}
+
+.page-footer__copyright-name:hover,
+.page-footer__copyright-name:focus {
+  opacity: 1;
+
+  &:active {
+    opacity: 0.3;
+  }
+}

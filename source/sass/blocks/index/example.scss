@@ -1,0 +1,59 @@
+.example {
+  background-color: $example-gray;
+}
+
+.example__title {
+  font-size: 36px;
+  line-height: 40px;
+  padding-top: 27px;
+  padding-bottom: 33px;
+}
+
+.example__text {
+  font-family: $arial;
+  margin: 0;
+  padding-bottom: 25px;
+}
+
+.example__progress {
+  position: relative;
+  width: 124px;
+  height: 56px;
+  border-radius: 3px;
+  border: 1px solid $light-gray;
+  box-sizing: border-box;
+  margin-bottom: 34px;
+}
+
+.example__progress-result {
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.example__progress-text {
+  position: absolute;
+  left: 15px;
+  top: 47px;
+  width: 80px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-family: $arial;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  text-transform: lowercase;
+  background-color: $example-gray;
+}
+
+.example__price-text,
+.example__price-value {
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.example__slider {
+  padding-bottom: 88px;
+}
