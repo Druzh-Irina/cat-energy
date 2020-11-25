@@ -1,0 +1,50 @@
+.promo {
+  position: relative;
+  min-width: 320px;
+  height: 302px;
+  background-color: rgba(104, 183, 56, 0.85);
+
+  &::before {
+    content: "";
+    position: absolute;
+    min-width: 320px;
+    height: 302px;
+    background-image: url("../img/index-background-cat.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: rgba(104, 183, 56, 0.85);
+    z-index: -1;
+  }
+}
+
+.promo__title {
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 25px;
+  font-weight: $font-weight-normal;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: $white;
+}
+
+.promo__text {
+  margin: 0;
+  padding-bottom: 28px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+}
+
+.promo__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.promo__button {
+  margin-top: 3px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 18px;
+}
