@@ -1,26 +1,18 @@
-.promo {
-  position: relative;
-  min-width: 320px;
-  height: 302px;
+.promo__wrapper {
+  padding-top: 27px; // отступ от заголовка promo__title в блоке promo
+  margin-bottom: 22px; // отступ между блоком promo и блоком program
+  background-size: 100%;
+  background-image:
+    linear-gradient(to top, $white 177px, rgba(104, 183, 56, 0.85) 177px),
+    url("../img/index-background-cat.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
   background-color: rgba(104, 183, 56, 0.85);
-
-  &::before {
-    content: "";
-    position: absolute;
-    min-width: 320px;
-    height: 302px;
-    background-image: url("../img/index-background-cat.jpg");
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-color: rgba(104, 183, 56, 0.85);
-    z-index: -1;
-  }
 }
 
 .promo__title {
   margin: 0;
-  padding-top: 27px;
-  padding-bottom: 25px;
+  margin-bottom: 25px;
   font-weight: $font-weight-normal;
   font-size: 36px;
   line-height: 36px;
@@ -30,7 +22,7 @@
 
 .promo__text {
   margin: 0;
-  padding-bottom: 28px;
+  margin-bottom: 28px;
   line-height: 14px;
   text-align: center;
   text-transform: uppercase;
@@ -40,10 +32,11 @@
 .promo__image {
   display: block;
   margin: 0 auto;
+  margin-bottom: 3px;
 }
 
 .promo__button {
-  margin-top: 3px;
+  margin: 0;
   width: 100%;
   font-size: 14px;
   line-height: 18px;

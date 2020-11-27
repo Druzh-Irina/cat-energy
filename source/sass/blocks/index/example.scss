@@ -2,27 +2,29 @@
   background-color: $example-gray;
 }
 
+.example__container {
+  padding-top: 27px; // отступ от заголовка
+}
+
 .example__title {
   font-size: 36px;
   line-height: 40px;
-  padding-top: 27px;
-  padding-bottom: 33px;
+  margin-bottom: 33px;
 }
 
 .example__text {
-  font-family: $arial;
   margin: 0;
-  padding-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .example__progress {
   position: relative;
   width: 124px;
-  height: 56px;
+  min-height: 56px;
   border-radius: 3px;
   border: 1px solid $light-gray;
   box-sizing: border-box;
-  margin-bottom: 34px;
+  margin-bottom: 26px;
 }
 
 .example__progress-result {
@@ -47,13 +49,11 @@
   background-color: $example-gray;
 }
 
-.example__price-text,
-.example__price-value {
+.example__price-text {
+  font-family: $arial;
+  margin: 0;
+  margin-bottom: 42px;
   line-height: 20px;
   text-transform: uppercase;
   color: $black;
-}
-
-.example__slider {
-  padding-bottom: 88px;
 }

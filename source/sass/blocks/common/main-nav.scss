@@ -1,10 +1,5 @@
 // Блок навигации внутри header
 
-.main-nav {
-  padding-top: 11px;
-  padding-bottom: 17px;
-}
-
 .main-nav__logo {
   position: relative;
 }
@@ -13,7 +8,7 @@
   content: "";
   position: absolute;
   min-width: 101px;
-  height: 18px;
+  min-height: 18px;
   left: 60px; // убрать после флексов
   background-image: url("../img/header-logo.svg");
   background-repeat: no-repeat;

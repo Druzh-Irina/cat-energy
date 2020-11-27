@@ -1,13 +1,16 @@
+.program__container {
+  margin-bottom: 27px; // отступ между блоком program и блоком advantages
+}
+
 .program__list {
   @include reset-list;
-  margin-bottom: 27px;
-  padding-top: 200px;
 }
 
 .program__item {
   position: relative;
   background-color: $gray;
-  margin-bottom: 20px;
+  padding-top: 27px; // отступ для заголовков
+  margin-bottom: 20px; // отступ между элементами
 
   &:last-child {
     margin-bottom: 0;
@@ -34,8 +37,8 @@
 .program__icon--slim::before {
   content: "";
   position: absolute;
-  width: 36px;
-  height: 50px;
+  min-width: 36px;
+  min-height: 50px;
   top: -8px;
   left: 22px;
   background-image: url("../img/program-slim-cat.svg");
@@ -47,8 +50,8 @@
 .program__icon--pro::before {
   content: "";
   position: absolute;
-  width: 67px;
-  height: 28px;
+  min-width: 67px;
+  min-height: 28px;
   top: 8px;
   left: 6px;
   background-image: url("../img/program-pro-cat.svg");
@@ -61,16 +64,14 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
-  padding-top: 30px;
-  padding-bottom: 29px;
+  margin-bottom: 29px;
 }
 
 
 .program__item-text {
   font-family: $arial;
   margin: 0;
-  padding-bottom: 29px;
-  border-bottom: 1px solid $medium-gray;
+  margin-bottom: 42px;
 }
 
 .program__item-button {
@@ -78,10 +79,8 @@
   vertical-align: top;
   font-size: 16px;
   line-height: 16px;
-  padding-top: 19px;
-  padding-bottom: 22px;
+  margin-bottom: 22px;
   text-transform: uppercase;
-  text-decoration: none;
 }
 
 .program__item-button:active {
