@@ -1,0 +1,46 @@
+// Блок навигации внутри header
+
+.main-nav__logo {
+  position: relative;
+}
+
+.main-nav__logo::before {
+  content: "";
+  position: absolute;
+  min-width: 101px;
+  min-height: 18px;
+  left: 60px; // убрать после флексов
+  background-image: url("../img/header-logo.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.main-nav__list {
+  @include reset-list;
+}
+
+.main-nav__link {
+  font-weight: $font-weight-normal;
+  font-size: 24px;
+  line-height: 37px;
+}
+
+.main-nav__link:hover,
+.main-nav__link:focus {
+  opacity: 0.6;
+}
+
+.main-nav__link:active {
+  opacity: 0.3;
+}
+
+.main-nav__link--active {
+  opacity: 1;
+  border-bottom: 2px solid $green;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 1;
+  }
+}

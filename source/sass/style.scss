@@ -1,1 +1,28 @@
-// Начните писать стили здесь
+// Шрифты
+@import "global/fonts.scss";
+
+// Переменные
+@import "global/variables.scss";
+
+// Базовые параметры страницы
+@import "global/scaffolding.scss";
+
+// Миксины (примеси)
+@import "global/mixins.scss";
+
+// Общие блоки
+@import "blocks/common/button.scss";
+@import "blocks/common/page-header.scss";
+@import "blocks/common/main-nav.scss";
+@import "blocks/common/page-footer.scss";
+@import "blocks/common/contacts.scss";
+
+// Главная страница
+@import "blocks/index/promo.scss";
+@import "blocks/index/program.scss";
+@import "blocks/index/advantages.scss";
+@import "blocks/index/example.scss";
+@import "blocks/index/slider.scss";
+
+// Страница каталога
+// Страница формы
