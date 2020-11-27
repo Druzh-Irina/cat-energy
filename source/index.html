@@ -3,25 +3,28 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-body">
   <header class="page-header">
     <div class="container">
       <h1 class="visually-hidden">Cat Energy - диетическое питание для кошек</h1>
-      <nav class="main-nav">
-        <a class="page-header__logo logo logo--header">
+      <nav class="main-nav page-header__main-nav">
+        <a class="main-nav__logo logo logo--header">
           <img src="https://via.placeholder.com/34x38" width="34" height="38" alt="Белый кот в рыжей суперодежде и маске">
         </a>
         <button class="main-nav__toggle burger" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a class="site-list__link">Главная</a>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--active">Главная</a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">Каталог продукции</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Подбор программы</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -30,28 +33,36 @@
 
   <main class="page-main">
 
-    <section class="action">
-      <div class="container">
-        <h2 class="action__title">Функциональное питание для котов</h2>
-        <p class="action__text">Занялся собой? Займись котом!</p>
-        <img class="action__image" src="https://via.placeholder.com/280x270" width="280" height="270" alt="Порция питания Cat Energy PRO с курицей">
-        <a class="action__button button action__button--choice" href="form.html">Подобрать программу</a>
+    <section class="promo">
+      <div class="promo__wrapper">
+        <div class="container">
+          <h2 class="promo__title">Функциональное  питание для котов</h2>
+          <p class="promo__text">Занялся собой? Займись котом!</p>
+          <img class="promo__image" src="https://via.placeholder.com/280x270" width="280" height="270" alt="Порция питания Cat Energy PRO с курицей">
+          <a class="promo__button button" href="form.html">Подобрать программу</a>
+        </div>
       </div>
     </section>
 
     <section class="program">
-      <div class="container">
+      <div class="container program__container">
         <h2 class="visually-hidden">Программа питания</h2>
         <ul class="program__list">
           <li class="program__item program__item--slim">
-            <h3 class="program__item-title">Похудение</h3>
+            <h3 class="program__item-title">
+              <span class="program__icon program__icon--slim"></span>
+              Похудение
+            </h3>
             <p class="program__item-text">
               Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
             </p>
             <a class="program__item-button" href="catalog-slim.html">Каталог Slim</a>
           </li>
           <li class="program__item program__item--pro">
-            <h3 class="program__item-title">Набор массы</h3>
+            <h3 class="program__item-title">
+              <span class="program__icon program__icon--pro"></span>
+              Набор массы
+            </h3>
             <p class="program__item-text">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
             </p>
@@ -62,7 +73,7 @@
     </section>
 
     <section class="advantages">
-      <div class="container">
+      <div class="container advantages__container">
         <h2 class="advantages__title">Как это работает</h2>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--icon-1">
@@ -82,7 +93,7 @@
     </section>
 
     <section class="example">
-      <div class="container">
+      <div class="container example__container">
         <h2 class="example__title">Живой пример</h2>
         <p class="example__text">
           Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
@@ -117,6 +128,7 @@
 
           <div class="example__toggles slider__toggles">
             <button class="slider__toggle slider__toggle--before" type="button">Было</button>
+            <div class="slider__control"><span class="slider__control-toggle"></span></div>
             <button class="slider__toggle slider__toggle--after" type="button">Стало</button>
           </div>
         </div>
@@ -133,15 +145,18 @@
           <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
       </div>
+    </section>
+    <section class="page-footer__map map">
       <div class="map-container">
         <h2 class="visually-hidden">Карта</h2>
         <img class="page-footer__map-image" src="https://via.placeholder.com/320x362" width="320" height="362" alt="Карта со схемой проезда">
       </div>
     </section>
 
-    <section class="page-footer__info">
+
+    <section class="page-footer__links">
       <div class="container">
-        <h2 class="visually-hidden">Информация и ссылки</h2>
+        <h2 class="visually-hidden">Cсылки и логотипы</h2>
         <a class="page-footer__logo logo logo--footer">
           <span class="visually-hidden">Логотип Cat Energy</span>
           <img class="logo__title" src="https://via.placeholder.com/128x24" width="128" height="24" alt="Черные буквы Cat Energy">

@@ -1,0 +1,43 @@
+.promo__wrapper {
+  padding-top: 27px; // отступ от заголовка promo__title в блоке promo
+  margin-bottom: 22px; // отступ между блоком promo и блоком program
+  background-size: 100%;
+  background-image:
+    linear-gradient(to top, $white 177px, rgba(104, 183, 56, 0.85) 177px),
+    url("../img/index-background-cat.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: rgba(104, 183, 56, 0.85);
+}
+
+.promo__title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: $font-weight-normal;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: $white;
+}
+
+.promo__text {
+  margin: 0;
+  margin-bottom: 28px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+}
+
+.promo__image {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 3px;
+}
+
+.promo__button {
+  margin: 0;
+  width: 100%;
+  font-size: 14px;
+  line-height: 18px;
+}
