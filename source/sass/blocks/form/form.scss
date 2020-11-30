@@ -33,16 +33,16 @@
   margin-bottom: 0;
 }
 
-.form--info {
+.form__module--info {
   padding-top: 39px;
   margin-bottom: 52px;
 }
 
-.form--program {
+.form__module--program {
   margin-bottom: 51px;
 }
 
-.form--adress {
+.form__module--adress {
   margin-bottom: 24px;
 
   .form__legend {
@@ -50,7 +50,7 @@
   }
 }
 
-.form--comment {
+.form__module--comment {
   margin-bottom: 38px;
 
   .form__legend {
@@ -58,7 +58,7 @@
   }
 }
 
-.form--extra {
+.form__module--extra {
   margin-bottom: 34px;
 
   .form__legend {
