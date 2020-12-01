@@ -1,0 +1,59 @@
+.extra__container {
+  margin-bottom: 35px;
+}
+
+.extra__title {
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 36px;
+}
+
+.extra__list {
+  @include reset-list;
+}
+
+
+.extra__item {
+  border-top: 1px solid $light-gray;
+  padding-top: 13px;
+  margin-bottom: 19px;
+
+  &:last-child {
+    border-bottom: 1px solid $light-gray;
+    margin: 0;
+    padding-bottom: 19px;
+  }
+}
+
+.extra__item-title {
+  font-size: 16px;
+  line-height: 16px;
+  color: $special-gray;
+}
+
+.extra__item-info {
+  font-family: $arial;
+  line-height: 14px;
+}
+
+.extra__action {
+  min-width: 280px;
+  min-height: 289px;
+  margin-top: 39px;
+  background-image: url("../img/icon-extra-gift.svg"), url("../img/extra-gift.jpg");
+  background-color: $green;
+  background-repeat: no-repeat;
+  background-position: center top 58px, center;
+  background-size: 78px 80px, cover;
+}
+
+.extra__text {
+  position: relative;
+  font-family: $arial;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+  padding-top: 186px;
+  text-align: center;
+  color: $white;
+}

@@ -25,6 +25,10 @@
 @import "blocks/index/slider.scss";
 
 // Страница каталога
+@import "blocks/catalog/catalog.scss";
+@import "blocks/catalog/product.scss";
+@import "blocks/catalog/extra.scss";
+
 // Страница формы
 @import "blocks/form/form.scss";
 @import "blocks/form/field-text.scss";

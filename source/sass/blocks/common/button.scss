@@ -1,5 +1,4 @@
 // Общая стилизация кнопок
-
 .button {
   display: inline-block;
   vertical-align: top;
@@ -16,6 +15,7 @@
   color: $white;
   background-color: $green;
   box-sizing: border-box;
+  border: none;
   cursor: pointer;
 
   &:hover,
@@ -25,5 +25,23 @@
 
   &:active {
     color: rgba($white, 0.3);
+  }
+}
+
+// Серая кнопка в каталоге
+.button--gray {
+  margin: 0;
+  padding: 20px 20px;
+  color: $dark-gray;
+  background-color: $gray;
+
+  &:hover,
+  &:focus {
+    background-color: $ultra-gray;
+  }
+
+  &:active {
+    color: $dark-gray;
+    opacity: 0.3;
   }
 }
