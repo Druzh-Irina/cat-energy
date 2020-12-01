@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-body">
@@ -29,95 +31,94 @@
     </div>
   </header>
 
-  <main>
+  <main class="page-main">
 
-    <section class="form">
-      <div class="container">
-        <form action="http://echo.htmlacademy.ru" method="post">
-          <h2 class="form__title">Подбор программы</h2>
-          <p class="form__text">
-            Заполните анкету и мы подберем программу питания для вашего кота
+    <form class="form" action="http://echo.htmlacademy.ru" method="post">
+      <div class="container form__container">
+        <h2 class="form__title">Подбор программы</h2>
+        <p class="form__text">
+          Заполните анкету и мы подберем программу питания для вашего кота
+        </p>
+
+        <fieldset class="form__module form__module--info">
+          <h3 class="visually-hidden">Информация о коте</h3>
+          <p class="form__field  field-text field-text--blank-1">
+            <label class="field-text__label" for="nickname">Имя:*</label>
+            <input class="field-text__input" type="text" name="nickname" id="nickname" placeholder="Барсик" required>
           </p>
+          <p class="form__field field-text field-text--blank-2">
+            <label class="field-text__label" for="weight">Вес (кг):*</label>
+            <input class="field-text__input" type="text" name="weight" id="weight" placeholder="7" required>
+          </p>
+          <p class="form__field field-text field-text--blank-3">
+            <label class="field-text__label" for="age">Возраст (лет):</label>
+            <input class="field-text__input" type="text" name="age" id="age" placeholder="7">
+          </p>
+        </fieldset>
 
-          <fieldset class="form__module">
-            <h3 class="visually-hidden">Информация о коте</h3>
-            <p class="form__field  field-text field-text--blank-1">
-              <label class="field-text__label" for="name">Имя:*</label>
-              <input class="field-text__input" type="text" name="name" id="name" placeholder="Барсик" required>
-            </p>
-            <p class="form__field field-text field-text--blank-2">
-              <label class="field-text__label" for="weight">Вес (кг):*</label>
-              <input class="field-text__input" type="text" name="weight" id="weight" placeholder="7" required>
-            </p>
-            <p class="form__field field-text field-text--blank-3">
-              <label class="field-text__label" for="age">Возраст (лет):</label>
-              <input class="field-text__input" type="text" name="age" id="age" placeholder="7">
-            </p>
-          </fieldset>
+        <fieldset class="form__module form__module--program">
+          <h3 class="visually-hidden">Вариант программы для кота</h3>
+          <p class="form__field field-radio">
+            <input class="field-radio__input visually-hidden" type="radio" name="selection" id="diet" value="diet" checked>
+            <label class="field-radio__label" for="diet">Похудение</label>
+          </p>
+          <p class="form__field field-radio">
+            <input class="field-radio__input visually-hidden" type="radio" name="selection" id="muscular" value="muscular">
+            <label class="field-radio__label" for="muscular">Набор массы</label>
+          </p>
+          <p class="form__field field-radio">
+            <input class="field-radio__input visually-hidden" type="radio" name="selection" id="advice" value="advice">
+            <label class="field-radio__label" for="advice">Не знаю (нужен ваш совет)</label>
+          </p>
+        </fieldset>
 
-          <fieldset class="form__module">
-            <h3 class="visually-hidden">Вариант программы для кота</h3>
-            <p class="form__field field-radio">
-              <input class="field-radio__input visually-hidden" type="radio" name="selection" id="diet" value="diet" checked>
-              <label class="field-radio__label" for="diet">Похудение</label>
-            </p>
-            <p class="form__field field-radio">
-              <input class="field-radio__input visually-hidden" type="radio" name="selection" id="muscular" value="muscular">
-              <label class="field-radio__label" for="muscular">Набор массы</label>
-            </p>
-            <p class="form__field field-radio">
-              <input class="field-radio__input visually-hidden" type="radio" name="selection" id="advice" value="advice">
-              <label class="field-radio__label" for="advice">Не знаю (нужен ваш совет)</label>
-            </p>
-          </fieldset>
+        <fieldset class="form__module form__module--adress">
+          <h3 class="form__legend">Контактные данные (владельца кота)</h3>
+          <p class="form__field field-text field-text--email">
+            <label class="field-text__label field-text__label" for="e-mail">E-mail:*</label>
+            <input class="field-text__input" type="email" name="e-mail" id="e-mail" placeholder="kuklachev@gmail.com" required>
+          </p>
+          <p class="form__field field-text field-text--phone">
+            <label class="field-text__label" for="telephone">Телефон:*</label>
+            <input class="field-text__input field-text__input-tel" type="tel" name="telephone" id="telephone" placeholder="8 (960) 900-60-90" required>
+          </p>
+        </fieldset>
 
-          <fieldset class="form__module">
-            <h3 class="form__legend">Контактные данные (владельца кота)</h3>
-            <p class="form__field field-text field-text--email">
-              <label class="field-text__label" for="e-mail">E-mail:*</label>
-              <input class="field-text__input" type="email" name="e-mail" id="e-mail" placeholder="kuklachev@gmail.com" required>
-            </p>
-            <p class="form__field field-text field-text--phone">
-              <label class="field-text__label" for="telephone">Телефон:*</label>
-              <input class="field-text__input" type="tel" name="telephone" id="telephone" placeholder="8 (960) 900-60-90" required>
-            </p>
-          </fieldset>
+        <fieldset class="form__module form__module--comment">
+          <h3 class="form__legend">Комментарий</h3>
+          <p class="field-text field-text--textarea">
+            <label class="field-text__label field-text__label" for="comment" aria-label="Комментарий"></label>
+            <textarea class="field-text__input" name="comment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </p>
+        </fieldset>
 
-          <fieldset class="form__module">
-            <h3 class="form__legend">Комментарий</h3>
-            <p class="field-text field-text--textarea">
-              <label class="field-text__label" for="comment" aria-label="Комментарий"></label>
-              <textarea class="field-text__input" name="comment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
-            </p>
-          </fieldset>
+        <fieldset class="form__module form__module--extra">
+          <h3 class="form__legend">Дополнительно</h3>
+          <p class="form__field  field-checkbox">
+            <input class="field-checkbox__input visually-hidden" type="checkbox" name="sugar" id="sugar" checked>
+            <label class="field-checkbox__label" for="sugar">Сахарозаменитель</label>
+          </p>
+          <p class="form__field  field-checkbox">
+            <input class="field-checkbox__input visually-hidden" type="checkbox" name="water" id="water">
+            <label class="field-checkbox__label" for="water">Питьевая вода</label>
+          </p>
+          <p class="form__field  field-checkbox">
+            <input class="field-checkbox__input visually-hidden" type="checkbox" name="milk" id="milk">
+            <label class="field-checkbox__label" for="milk">Молоко</label>
+          </p>
+          <p class="form__field  field-checkbox">
+            <input class="field-checkbox__input visually-hidden" type="checkbox" name="vitamins" id="vitamins">
+            <label class="field-checkbox__label" for="vitamins">Витамины</label>
+          </p>
+        </fieldset>
 
-          <fieldset class="form__module">
-            <h3 class="form__legend">Дополнительно</h3>
-            <p class="form__field  field-checkbox">
-              <input class="field-checkbox__input visually-hidden" type="checkbox" name="sugar" id="sugar" checked>
-              <label class="field-checkbox__label" for="sugar">Сахарозаменитель</label>
-            </p>
-            <p class="form__field  field-checkbox">
-              <input class="field-checkbox__input visually-hidden" type="checkbox" name="water" id="water">
-              <label class="field-checkbox__label" for="water">Питьевая вода</label>
-            </p>
-            <p class="form__field  field-checkbox">
-              <input class="field-checkbox__input visually-hidden" type="checkbox" name="milk" id="milk">
-              <label class="field-checkbox__label" for="milk">Молоко</label>
-            </p>
-            <p class="form__field  field-checkbox">
-              <input class="field-checkbox__input visually-hidden" type="checkbox" name="vitamins" id="vitamins">
-              <label class="field-checkbox__label" for="vitamins">Витамины</label>
-            </p>
-          </fieldset>
+        <div class="form__submit field-submit">
+          <button class="field-submit__button button field-submit__button--submit" type="submit">Отправить заявку</button>
+          <p class="field-submit__note"><sup>*</sup> — Обязательные поля</p>
+        </div>
+      </form>
+    </div>
 
-          <div class="form__submit field-submit">
-            <button class="field-submit__button button field-submit__button--submit" type="submit">Отправить заявку</button>
-            <p class="field-submit__note"><sup>*</sup> — Обязательные поля</p>
-          </div>
-        </form>
-      </div>
-    </section>
   </main>
 
   <footer class="page-footer">

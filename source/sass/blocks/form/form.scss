@@ -1,0 +1,67 @@
+.form {
+  border-top: 1px solid $medium-gray;
+}
+
+.form__container {
+  padding-top: 27px; // Отступ для заголовка
+  margin-bottom: 32px; // Отступ от блока form до блока page-header
+}
+
+.form__title {
+  font-size: 36px;
+  line-height: 36px;
+  margin-bottom: 37px;
+}
+
+.form__text {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.form__module {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.form__field {
+  margin: 0;
+  margin-bottom: 14px; // расстояние между полями ввода
+}
+
+.form__field:last-child {
+  margin-bottom: 0;
+}
+
+.form__module--info {
+  padding-top: 39px;
+  margin-bottom: 52px;
+}
+
+.form__module--program {
+  margin-bottom: 51px;
+}
+
+.form__module--adress {
+  margin-bottom: 24px;
+
+  .form__legend {
+    margin-bottom: 35px;
+  }
+}
+
+.form__module--comment {
+  margin-bottom: 38px;
+
+  .form__legend {
+    margin-bottom: 38px;
+  }
+}
+
+.form__module--extra {
+  margin-bottom: 34px;
+
+  .form__legend {
+    margin-bottom: 39px;
+  }
+}

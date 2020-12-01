@@ -1,0 +1,68 @@
+.field-text {
+  display: flex;
+  align-items: center;
+}
+
+.field-text__label {
+  flex-shrink: 0;
+  margin-right: 15px;
+  font-size: 16px;
+  color: $dark-gray;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.field-text__input {
+  width: 100%;
+  min-width: 80px;
+  margin: 0;
+  padding: 13px 15px;
+  border: 1px solid $hyper-gray;
+  font-family: inherit;
+  font-size: 16px;
+  text-transform: uppercase;
+
+  &::placeholder {
+    color: $dark-gray;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $light-gray;
+  }
+
+  &:disabled {
+    border: 2px solid $dark-gray;
+  }
+}
+
+.field-text--textarea {
+  flex-wrap: wrap;
+
+  .field-text__input {
+    min-height: 150px;
+    resize: none;
+  }
+}
+
+// убирает авто-иконки в браузере Safari
+.field-text__input::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  display: none;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+// убирает авто-иконки в браузерах
+.field-text__input::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.field-text__input::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
