@@ -1,7 +1,11 @@
 // Блок навигации внутри header
-
 .main-nav__logo {
   position: relative;
+}
+
+.main-nav__logo img {
+  min-width: 34px;
+  min-height: 38px;
 }
 
 .main-nav__logo::before {
@@ -9,20 +13,58 @@
   position: absolute;
   min-width: 101px;
   min-height: 18px;
-  left: 60px; // убрать после флексов
+  left: 60px;
   background-image: url("../img/header-logo.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
 }
 
 .main-nav__list {
   @include reset-list;
 }
 
+@media (min-width: $desktop-width) {
+  .main-nav__item--index a {
+    color: $white;
+  }
+
+  .main-nav__item--index .main-nav__link--active {
+    border-bottom: 2px solid $white;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .main-nav__list {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    .main-nav__item {
+      margin-left: 36px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
 .main-nav__link {
   font-weight: $font-weight-normal;
-  font-size: 24px;
-  line-height: 37px;
+  font-size: 18px;
+  line-height: 24px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .main-nav__link:hover,

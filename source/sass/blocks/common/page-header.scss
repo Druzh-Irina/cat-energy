@@ -1,4 +1,36 @@
+@media (min-width: $desktop-width) {
+  .page-header--index {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 50%;
+      z-index: -1;
+      height: 694px;
+      background-image:
+        linear-gradient(rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 50%),
+        url("../img/index-background-desktop-cat.jpg");
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: cover;
+    }
+  }
+}
+
 .page-header__main-nav {
-  padding-top: 24px; // отступ от блока main-nav наверх
+  display: flex;
+  justify-content: space-between;
+  padding-top: 11px; // отступ от блока main-nav наверх
   margin-bottom: 17px; // отступ между блоком main-nav и блоком promo
+
+  @media (min-width: $tablet-width) {
+    padding-top: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 55px;
+  }
 }

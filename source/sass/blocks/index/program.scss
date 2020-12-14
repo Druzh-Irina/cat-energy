@@ -1,18 +1,46 @@
 .program__container {
   margin-bottom: 27px; // отступ между блоком program и блоком advantages
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 71px;
+  }
 }
 
 .program__list {
   @include reset-list;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .program__item {
   position: relative;
   background-color: $gray;
   padding-top: 27px; // отступ для заголовков
+  padding-bottom: 22px; // отступ блока с фоном
   margin-bottom: 20px; // отступ между элементами
 
   &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .program__item {
+    padding-top: 77px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program__item {
+    width: 570px;
     margin-bottom: 0;
   }
 }
@@ -34,6 +62,31 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .program__icon {
+    padding-left: 52px;
+
+    &::after {
+      width: 200px;
+      height: 200px;
+      left: 500px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program__icon {
+    padding-left: 200px;
+
+    &::after {
+      width: 100px;
+      height: 100px;
+      top: -25px;
+      left: 45px;
+    }
+  }
+}
+
 .program__icon--slim::before {
   content: "";
   position: absolute;
@@ -45,6 +98,20 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    min-width: 140px;
+    min-height: 192px;
+    top: 80px;
+    left: 580px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 70px;
+    min-height: 97px;
+    top: 8px;
+    left: 80px;
+  }
 }
 
 .program__icon--pro::before {
@@ -58,6 +125,20 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    min-width: 140px;
+    min-height: 192px;
+    top: 80px;
+    left: 560px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 70px;
+    min-height: 97px;
+    top: 8px;
+    left: 60px;
+  }
 }
 
 .program__item-title {
@@ -65,22 +146,110 @@
   line-height: 37px;
   text-transform: uppercase;
   margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 73px;
+  }
 }
 
 
 .program__item-text {
   font-family: $arial;
-  margin: 0;
-  margin-bottom: 42px;
+  margin: 0 20px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid $medium-gray;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 52px;
+    padding-bottom: 0;
+    margin: 0;
+    margin-bottom: 52px;
+    border: none;
+    width: 425px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 27px;
+    width: 540px;
+  }
 }
 
 .program__item-button {
+  position: relative;
   display: inline-block;
   vertical-align: top;
   font-size: 16px;
   line-height: 16px;
+  padding-top: 19px;
+  padding-left: 20px;
   margin-bottom: 22px;
   text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    right: -30px;
+    width: 18px;
+    height: 3px;
+    background-color: $black;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 19px;
+    right: -42px;
+
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-left: 12px solid $black;
+    border-bottom: 7px solid transparent;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .program__item-button {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 52px;
+    margin-bottom: 57px;
+
+    &::before {
+      top: 33px;
+    }
+
+    &::after {
+      top: 28px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program__item-button {
+    margin-bottom: 59px;
+
+    &::before {
+      height: 2px;
+    }
+
+    &::after {
+      top: 27px;
+    }
+  }
 }
 
 .program__item-button:active {

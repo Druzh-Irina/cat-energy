@@ -1,37 +1,149 @@
 .example {
   background-color: $example-gray;
+
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+    border-top: 1px solid $extra-gray;
+  }
+
+  @media (min-width: $desktop-width) {
+    border-top: none;
+    background-image:
+      linear-gradient(to bottom, $white 135px, transparent 135px),
+      linear-gradient(to right, $gray 60%, $example-gray 40%);
+    background-repeat: no-repeat;
+    background-position: bottom, top;
+    background-size: 100%;
+  }
+}
+
+.example__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 110px;
+    max-width: 1440px;
+    width: 100%;
+
+    .container {
+      padding: 0;
+    }
+  }
 }
 
 .example__container {
   padding-top: 27px; // отступ от заголовка
+
+  @media (min-width: $tablet-width) {
+    padding-top: 43px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .example__title {
   font-size: 36px;
   line-height: 40px;
   margin-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 76px;
+  }
 }
 
 .example__text {
   margin: 0;
   margin-bottom: 25px;
+  width: 280px;
+  font-family: $arial;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 54px;
+    width: 700px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 70px;
+    margin-bottom: 69px;
+    width: 436px;
+    z-index: 1;
+  }
+}
+
+.example__statistics {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 67px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    width: 366px;
+    margin-bottom: 0;
+  }
+}
+
+.example__progress-list {
+  display: flex;
+  justify-content: space-between;
 }
 
 .example__progress {
   position: relative;
   width: 124px;
-  min-height: 56px;
+  height: 56px;
   border-radius: 3px;
   border: 1px solid $light-gray;
   box-sizing: border-box;
-  margin-bottom: 26px;
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+    height: 72px;
+    margin-bottom: 0;
+
+    &:first-child {
+      margin-right: 42px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 60px;
+  }
 }
 
 .example__progress-result {
+  position: absolute;
+  top: 15px;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.example__progress-result--block-1 {
+  left: 55px;
+}
+
+.example__progress-result--block-2 {
+  left: 30px;
 }
 
 .example__progress-text {
@@ -47,13 +159,54 @@
   text-align: center;
   text-transform: lowercase;
   background-color: $example-gray;
+
+  @media (min-width: $tablet-width) {
+    left: 5px;
+    top: 63px;
+    width: 150px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: $white;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $gray;
+  }
 }
 
 .example__price-text {
-  font-family: $arial;
   margin: 0;
   margin-bottom: 42px;
   line-height: 20px;
+
+  text-align: center;
   text-transform: uppercase;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 180px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    width: 330px;
+
+    .example__price-value {
+      padding-left: 63px;
+    }
+  }
+}
+
+.example__slider {
+  padding-bottom: 31px; // отступ до конца фона в блоке example
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 70px;
+  }
 }
