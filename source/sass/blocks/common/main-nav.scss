@@ -30,11 +30,11 @@
 }
 
 @media (min-width: $desktop-width) {
-  .main-nav__item--index a {
+  .main-nav__list--index a {
     color: $white;
   }
 
-  .main-nav__item--index .main-nav__link--active {
+  .main-nav__list--index .main-nav__link--active {
     border-bottom: 2px solid $white;
   }
 }

@@ -45,6 +45,7 @@
 }
 
 .example__title {
+  @include caption;
   font-size: 36px;
   line-height: 40px;
   margin-bottom: 33px;
@@ -63,7 +64,6 @@
 .example__text {
   margin: 0;
   margin-bottom: 25px;
-  width: 280px;
   font-family: $arial;
 
   @media (min-width: $tablet-width) {
