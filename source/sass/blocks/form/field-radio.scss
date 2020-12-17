@@ -1,6 +1,9 @@
 .field-radio {
-  display: flex;
-  flex-wrap: wrap;
+  margin-bottom: 23px; // расстояние между радиокнопками
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .field-radio__label {
@@ -16,12 +19,19 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: 3px;
+    bottom: -2px;
     left: 1px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     border: 1px solid $light-gray;
+
+    @media (min-width: $tablet-width) {
+      bottom: -5px;
+      left: 20px;
+      width: 40px;
+      height: 40px;
+    }
   }
 
   &::after {
@@ -34,6 +44,21 @@
     border-radius: 50%;
     background-color: $green;
     opacity: 0;
+
+    @media (min-width: $tablet-width) {
+      top: 5px;
+      left: 31px;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .field-radio__label {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 80px;
   }
 }
 

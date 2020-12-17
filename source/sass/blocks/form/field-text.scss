@@ -1,6 +1,22 @@
 .field-text {
   display: flex;
   align-items: center;
+  margin: 0;
+  margin-bottom: 14px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .field-text--email {
+    margin-bottom: 0;
+  }
 }
 
 .field-text__label {
@@ -10,13 +26,18 @@
   color: $dark-gray;
   text-transform: uppercase;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .field-text__input {
   width: 100%;
   min-width: 80px;
   margin: 0;
-  padding: 13px 15px;
+  padding: 11px 15px;
   border: 1px solid $hyper-gray;
   font-family: inherit;
   font-size: 16px;
@@ -33,6 +54,37 @@
 
   &:disabled {
     border: 2px solid $dark-gray;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .field-text__input {
+    font-size: 20px;
+    line-height: 30px;
+    margin-right: 37px;
+    padding: 10px 15px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .field-text--blank-1 .field-text__input {
+    width: 506px;
+  }
+
+  .field-text--blank-2 .field-text__input {
+    width: 477px;
+  }
+
+  .field-text--blank-3 .field-text__input {
+    width: 436px;
+  }
+
+  .field-text--email .field-text__input {
+    width: 486px;
+  }
+
+  .field-text--phone .field-text__input {
+    width: 472px;
   }
 }
 
@@ -65,4 +117,28 @@
   display: none;
   width: 0;
   height: 0;
+}
+
+.field-submit__button {
+  width: 100%;
+  margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    padding: 13px 45px;
+    margin-bottom: 0;
+    width: auto;
+  }
+}
+
+.field-submit__note {
+  margin: 0;
+  line-height: 16px;
+  font-family: $arial;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    text-align: left;
+  }
 }
