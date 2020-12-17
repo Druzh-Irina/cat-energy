@@ -3,3 +3,10 @@
   margin: 0;
   list-style: none;
 }
+
+@mixin caption {
+  margin: 0;
+  font-style: normal;
+  font-weight: $font-weight-normal;
+  color: $black;
+}

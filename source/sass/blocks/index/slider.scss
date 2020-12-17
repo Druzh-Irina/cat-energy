@@ -1,3 +1,17 @@
+
+.slider {
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient(to left, $gray 50%, $example-gray 50%);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% 462px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(to right, $gray 50%, $example-gray 50%);
+  }
+}
+
 .slider__pictures {
   margin-bottom: 27px;
 }
@@ -5,6 +19,11 @@
 .slider__slide-image {
   display: block;
   margin: 0 auto;
+}
+
+.slider__toggles {
+  display: flex;
+  justify-content: center;
 }
 
 .slider__toggle {
@@ -19,6 +38,11 @@
   background-color: transparent;
   color: $black;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .slider__toggle:hover,
@@ -32,12 +56,21 @@
 
 .slider__control {
   position: relative;
+  margin: 3px 13px;
   width: 84px;
-  min-height: 14px;
+  height: 14px;
   border-radius: 6px;
   border: 1px solid $light-gray;
   background-color: $white;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 428px;
+    height: 6px;
+    margin: 15px 20px;
+    border: none;
+    background-color: $middle-gray;
+  }
 }
 
 .slider__control-toggle {
@@ -48,4 +81,36 @@
   min-height: 6px;
   background-color: $green;
   border-radius: 6px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    top: -12px;
+    left: 199px;
+    width: 34px;
+    height: 34px;
+    border: 1px solid $light-gray;
+    background-color: $white;
+    border-radius: 50%;
+    box-shadow: (0 1px 3px rgba(0, 0, 0, 0.16));
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      margin: auto;
+      border-radius: 50%;
+      background-color: $green;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: (0 2px 4px rgba(0, 0, 0, 0.19));
+    }
+
+    &:active {
+      border: 1px solid $green;
+      box-shadow: (0 3px 5px rgba(0, 0, 0, 0.2));
+    }
+  }
 }

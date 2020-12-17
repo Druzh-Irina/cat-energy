@@ -7,7 +7,7 @@
   text-decoration: none;
   min-width: 280px;
   min-height: 40px;
-  font-family: $oswald;
+  font-family: inherit;
   font-weight: $font-weight-normal;
   font-size: 16px;
   line-height: 20px;
@@ -32,6 +32,7 @@
 .button--gray {
   margin: 0;
   padding: 20px 20px;
+  font-family: inherit;
   color: $dark-gray;
   background-color: $gray;
 
