@@ -67,6 +67,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .field-text__input {
+    margin-right: 0;
+  }
+
   .field-text--blank-1 .field-text__input {
     width: 506px;
   }
