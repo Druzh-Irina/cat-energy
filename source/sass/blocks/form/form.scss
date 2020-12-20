@@ -2,20 +2,20 @@
   position: relative;
   border-top: 1px solid $medium-gray;
 
-  &::before {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
-    top: 368px;
     width: 100%;
     border-bottom: 1px solid $medium-gray;
   }
 
+  &::before {
+    top: 368px;
+  }
+
   &::after {
-    content: "";
-    position: absolute;
     top: 537px;
-    width: 100%;
-    border-bottom: 1px solid $medium-gray;
   }
 }
 
@@ -23,10 +23,7 @@
   .form {
     border: none;
 
-    &::before {
-      border: none;
-    }
-
+    &::before,
     &::after {
       border: none;
     }
@@ -89,12 +86,41 @@
   border: none;
 }
 
+.form__module--info .form__field,
+.form__module--adress .form__field,
+.form__module--comment .form__field {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 14px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__module--adress .form__field {
+    margin-bottom: 0;
+  }
+}
+
 .form__module--info {
   position: relative;
   margin-bottom: 52px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 72px; // отступ блока form__module--info до блока form__module--program
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .form__module--info,
+  .form__module--program {
     border: none;
   }
 }
@@ -104,7 +130,6 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 75px; // отступ блока form__module--program до блока form__module--address
-    border: none;
   }
 }
 
@@ -121,18 +146,23 @@
   }
 }
 
+.form__module--program .form__field {
+  margin: 0;
+  margin-bottom: 23px; // расстояние между радиокнопками
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
 .form__module--adress {
   position: relative;
   margin-bottom: 24px; // отступ блока form__module--address до  блока form__module--comment
 
   &::after {
-    content: "";
-    position: absolute;
+    @include form-green-border;
     top: 16px;
-    width: 100%;
-    border-bottom: 3px solid $green;
-    background-color: $green;
-    z-index: -1;
 
     @media (min-width: $tablet-width) {
       top: 18px;
@@ -146,8 +176,7 @@
 
   span {
     background-image: linear-gradient(to top, $white 30px, transparent 30px);
-    padding: 0 15px 0 100%;
-    margin-left: -100%;
+    padding-right: 15px;
   }
 }
 
@@ -187,14 +216,8 @@
   margin-bottom: 23px; // отступ блока form__module--comment до блока form__module--extra
 
   &::after {
-    content: "";
-    position: absolute;
+    @include form-green-border;
     top: 14px;
-    right: 1px;
-    width: 100%;
-    border-bottom: 3px solid $green;
-    background-color: $green;
-    z-index: -1;
 
     @media (min-width: $tablet-width) {
       top: 22px;
@@ -207,8 +230,7 @@
 
   span {
     background-color: $white;
-    padding: 0 22px 0 100%;
-    margin-left: -100%;
+    padding-right: 22px;
   }
 }
 
@@ -235,14 +257,8 @@
   margin-bottom: 34px; // отступ блока form__module--comment до блока field-submit
 
   &::after {
-    content: "";
-    position: absolute;
+    @include form-green-border;
     top: 14px;
-    right: 1px;
-    width: 100%;
-    border-bottom: 3px solid $green;
-    background-color: $green;
-    z-index: -1;
 
     @media (min-width: $tablet-width) {
       top: 24px;
@@ -250,13 +266,36 @@
   }
 }
 
+.form__module--extra .form__field {
+  margin: 0;
+  margin-bottom: 23px; // расстояние между чекбокс-кнопками
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: 42px;
+    }
+
+    &:nth-last-child(1),
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
 .form__module--extra .form__legend {
   margin-bottom: 34px;
 
   span {
     background-color: $white;
-    padding: 0 24px 0 100%;
-    margin-left: -100%;
+    padding-right: 24px;
   }
 }
 
@@ -319,5 +358,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 100px;
+  }
+}
+
+.form__button {
+  margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
   }
 }
