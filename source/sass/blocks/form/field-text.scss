@@ -43,10 +43,15 @@
     margin-right: 37px;
     padding: 10px 15px;
   }
+
+  .field-text--textarea {
+    margin-right: 55px;
+  }
 }
 
 @media (min-width: $desktop-width) {
-  .field-text__input {
+  .field-text__input,
+  .field-text--textarea {
     margin-right: 0;
   }
 

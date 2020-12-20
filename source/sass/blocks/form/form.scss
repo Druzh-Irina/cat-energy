@@ -103,12 +103,6 @@
   }
 }
 
-@media (min-width: $desktop-width) {
-  .form__module--adress .form__field {
-    margin-bottom: 0;
-  }
-}
-
 .form__module--info {
   position: relative;
   margin-bottom: 52px;
@@ -170,32 +164,32 @@
   }
 }
 
-.form__module--adress .form__legend {
-  margin-bottom: 35px; // отступ от заголовка
-  background-image: linear-gradient(to right, $white 200px, transparent 200px);
-
-  span {
-    background-image: linear-gradient(to top, $white 30px, transparent 30px);
-    padding-right: 15px;
-  }
-}
-
 @media (min-width: $tablet-width) {
   .form__module--adress {
     margin-bottom: 65px; // отступ блока form__module--address до блока form__module--comment
   }
 }
 
+.form__module--adress span {
+  position: relative;
+
+  &::before {
+    @include form-white-background;
+    width: 230px;
+
+    @media (min-width: $tablet-width) {
+      width: 560px;
+    }
+  }
+}
+
+.form__module--adress .form__legend {
+  margin-bottom: 35px; // отступ от заголовка
+}
+
 @media (min-width: $tablet-width) {
   .form__module--adress .form__legend {
     margin-bottom: 76px; // отступ от заголовка
-    background-image: none;
-
-    span {
-      background-color: $white;
-      padding: 0 42px 0 39px;
-      margin-left: -39px;
-    }
 
     br {
       display: none;
@@ -208,6 +202,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__module--adress .form__field {
+    margin-bottom: 0; // убирает отступ снизу у поля e-mail
   }
 }
 
@@ -225,30 +225,32 @@
   }
 }
 
-.form__module--comment .form__legend {
-  margin-bottom: 38px; // отступ от заголовка
-
-  span {
-    background-color: $white;
-    padding-right: 22px;
-  }
-}
-
 @media (min-width: $tablet-width) {
   .form__module--comment {
     margin-bottom: 65px; // отступ блока form__module--comment до блока form__module--extra
   }
 }
 
+.form__module--comment span {
+  position: relative;
+
+  &::before {
+    @include form-white-background;
+    width: 160px;
+
+    @media (min-width: $tablet-width) {
+      width: 230px;
+    }
+  }
+}
+
+.form__module--comment .form__legend {
+  margin-bottom: 38px; // отступ от заголовка
+}
+
 @media (min-width: $tablet-width) {
   .form__module--comment .form__legend {
     margin-bottom: 76px; // отступ от заголовка
-
-    span {
-      background-color: $white;
-      padding: 0 38px 0 39px;
-      margin-left: -39px;
-    }
   }
 }
 
@@ -262,6 +264,25 @@
 
     @media (min-width: $tablet-width) {
       top: 24px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .form__module--extra {
+    margin-bottom: 54px; // отступ блока form__module--comment до блока field-submit
+  }
+}
+
+.form__module--extra span {
+  position: relative;
+
+  &::before {
+    @include form-white-background;
+    width: 180px;
+
+    @media (min-width: $tablet-width) {
+      width: 260px;
     }
   }
 }
@@ -289,31 +310,13 @@
   }
 }
 
-
 .form__module--extra .form__legend {
   margin-bottom: 34px;
-
-  span {
-    background-color: $white;
-    padding-right: 24px;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .form__module--extra {
-    margin-bottom: 54px; // отступ блока form__module--comment до блока field-submit
-  }
 }
 
 @media (min-width: $tablet-width) {
   .form__module--extra .form__legend {
     margin-bottom: 57px;
-
-    span {
-      background-color: $white;
-      padding: 0 38px 0 39px;
-      margin-left: -39px;
-    }
   }
 }
 
