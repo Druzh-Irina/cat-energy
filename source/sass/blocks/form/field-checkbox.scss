@@ -1,38 +1,57 @@
-.field-checkbox {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .field-checkbox__label {
   position: relative;
   width: 100%;
   font-size: 16px;
   min-height: 30px;
   padding-left: 46px;
+  margin: 0;
   text-transform: uppercase;
   color: $black;
   cursor: pointer;
 
-  &::before {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
-    bottom: 3px;
+  }
+
+  &::before {
+    bottom: -3px;
     left: 1px;
     width: 30px;
     height: 30px;
     border: 1px solid $light-gray;
+
+    @media (min-width: $tablet-width) {
+      bottom: -5px;
+      left: 1px;
+      width: 40px;
+      height: 40px;
+    }
   }
 
   &::after {
-    content: "";
-    position: absolute;
-    top: 4px;
+    top: 3px;
     left: 8px;
     width: 21px;
     height: 16px;
     background-image: url("../img/icon-checkmark.svg");
     background-repeat: no-repeat;
     opacity: 0;
+
+    @media (min-width: $tablet-width) {
+      top: 8px;
+      left: 12px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .field-checkbox__label {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 60px;
+    margin-bottom: 0;
   }
 }
 

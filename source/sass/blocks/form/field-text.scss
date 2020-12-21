@@ -1,8 +1,3 @@
-.field-text {
-  display: flex;
-  align-items: center;
-}
-
 .field-text__label {
   flex-shrink: 0;
   margin-right: 15px;
@@ -10,13 +5,18 @@
   color: $dark-gray;
   text-transform: uppercase;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .field-text__input {
   width: 100%;
   min-width: 80px;
   margin: 0;
-  padding: 13px 15px;
+  padding: 11px 15px;
   border: 1px solid $hyper-gray;
   font-family: inherit;
   font-size: 16px;
@@ -33,6 +33,46 @@
 
   &:disabled {
     border: 2px solid $dark-gray;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .field-text__input {
+    font-size: 20px;
+    line-height: 30px;
+    margin-right: 37px;
+    padding: 10px 15px;
+  }
+
+  .field-text--textarea {
+    margin-right: 55px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .field-text__input,
+  .field-text--textarea {
+    margin-right: 0;
+  }
+
+  .field-text--blank-1 .field-text__input {
+    width: 506px;
+  }
+
+  .field-text--blank-2 .field-text__input {
+    width: 477px;
+  }
+
+  .field-text--blank-3 .field-text__input {
+    width: 436px;
+  }
+
+  .field-text--email .field-text__input {
+    width: 486px;
+  }
+
+  .field-text--phone .field-text__input {
+    width: 472px;
   }
 }
 
@@ -65,4 +105,26 @@
   display: none;
   width: 0;
   height: 0;
+}
+
+.field-submit__button {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    padding: 13px 45px;
+    width: auto;
+  }
+}
+
+.field-submit__note {
+  margin: 0;
+  line-height: 16px;
+  font-family: $arial;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    text-align: left;
+  }
 }

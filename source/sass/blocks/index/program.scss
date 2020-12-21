@@ -91,17 +91,22 @@
   }
 }
 
-.program__icon--slim::before {
+
+.program__icon--slim::before,
+.program__icon--pro::before {
   content: "";
   position: absolute;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  z-index: 2;
+}
+
+.program__icon--slim::before {
   min-width: 36px;
   min-height: 50px;
   top: -8px;
   left: 9px;
   background-image: url("../img/program-slim-cat.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  z-index: 2;
 
   @media (min-width: $tablet-width) {
     min-width: 140px;
@@ -119,16 +124,11 @@
 }
 
 .program__icon--pro::before {
-  content: "";
-  position: absolute;
   min-width: 67px;
   min-height: 28px;
   top: 8px;
   left: -7px;
   background-image: url("../img/program-pro-cat.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  z-index: 2;
 
   @media (min-width: $tablet-width) {
     min-width: 140px;

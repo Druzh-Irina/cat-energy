@@ -10,3 +10,24 @@
   font-weight: $font-weight-normal;
   color: $black;
 }
+
+@mixin form-green-border {
+  content: "";
+  position: absolute;
+  width: 92%;
+  right: 0;
+  border-bottom: 3px solid $green;
+  z-index: -2;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+@mixin form-white-background {
+  content: "";
+  position: absolute;
+  left: -25px;
+  border-bottom: 55px solid $white;
+  z-index: -1;
+}

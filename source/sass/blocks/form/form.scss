@@ -1,10 +1,47 @@
 .form {
+  position: relative;
   border-top: 1px solid $medium-gray;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid $medium-gray;
+  }
+
+  &::before {
+    top: 368px;
+  }
+
+  &::after {
+    top: 537px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .form {
+    border: none;
+
+    &::before,
+    &::after {
+      border: none;
+    }
+  }
 }
 
 .form__container {
   padding-top: 27px; // Отступ для заголовка
-  margin-bottom: 32px; // Отступ от блока form до блока page-header
+  margin-bottom: 39px; // Отступ от блока form до блока form__module--info
+
+  @media (min-width: $tablet-width) {
+    padding-top: 75px;
+    margin-bottom: 66px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 87px;
+  }
 }
 
 .form__title {
@@ -12,11 +49,35 @@
   font-size: 36px;
   line-height: 36px;
   margin-bottom: 37px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 56px;
+  }
 }
 
 .form__text {
   margin: 0;
   text-transform: uppercase;
+  color: $black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .form__module {
@@ -25,48 +86,288 @@
   border: none;
 }
 
-.form__field {
+.form__module--info .form__field,
+.form__module--adress .form__field,
+.form__module--comment .form__field {
+  display: flex;
+  align-items: center;
   margin: 0;
-  margin-bottom: 14px; // расстояние между полями ввода
-}
+  margin-bottom: 14px;
 
-.form__field:last-child {
-  margin-bottom: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .form__module--info {
-  padding-top: 39px;
+  position: relative;
   margin-bottom: 52px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px; // отступ блока form__module--info до блока form__module--program
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .form__module--info,
+  .form__module--program {
+    border: none;
+  }
 }
 
 .form__module--program {
   margin-bottom: 51px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 75px; // отступ блока form__module--program до блока form__module--address
+  }
 }
 
-.form__module--adress {
-  margin-bottom: 24px;
+.form__module-program-wrapper {
+  @media (min-width: $tablet-width) {
+    border: 1px solid $hyper-gray;
+    margin-right: 37px;
+    padding: 25px 28px;
+  }
 
-  .form__legend {
-    margin-bottom: 35px;
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+    width: 570px;
+  }
+}
+
+.form__module--program .form__field {
+  margin: 0;
+  margin-bottom: 23px; // расстояние между радиокнопками
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+.form__module--adress {
+  position: relative;
+  margin-bottom: 24px; // отступ блока form__module--address до  блока form__module--comment
+
+  &::after {
+    @include form-green-border;
+    top: 16px;
+
+    @media (min-width: $tablet-width) {
+      top: 18px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .form__module--adress {
+    margin-bottom: 65px; // отступ блока form__module--address до блока form__module--comment
+  }
+}
+
+.form__module--adress span {
+  position: relative;
+
+  &::before {
+    @include form-white-background;
+    width: 230px;
+
+    @media (min-width: $tablet-width) {
+      width: 560px;
+    }
+  }
+}
+
+.form__module--adress .form__legend {
+  margin-bottom: 35px; // отступ от заголовка
+}
+
+@media (min-width: $tablet-width) {
+  .form__module--adress .form__legend {
+    margin-bottom: 76px; // отступ от заголовка
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.form__module-adress-wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__module--adress .form__field {
+    margin-bottom: 0; // убирает отступ снизу у поля e-mail
   }
 }
 
 .form__module--comment {
-  margin-bottom: 38px;
+  position: relative;
+  margin-bottom: 23px; // отступ блока form__module--comment до блока form__module--extra
 
-  .form__legend {
-    margin-bottom: 38px;
+  &::after {
+    @include form-green-border;
+    top: 14px;
+
+    @media (min-width: $tablet-width) {
+      top: 22px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .form__module--comment {
+    margin-bottom: 65px; // отступ блока form__module--comment до блока form__module--extra
+  }
+}
+
+.form__module--comment span {
+  position: relative;
+
+  &::before {
+    @include form-white-background;
+    width: 160px;
+
+    @media (min-width: $tablet-width) {
+      width: 230px;
+    }
+  }
+}
+
+.form__module--comment .form__legend {
+  margin-bottom: 38px; // отступ от заголовка
+}
+
+@media (min-width: $tablet-width) {
+  .form__module--comment .form__legend {
+    margin-bottom: 76px; // отступ от заголовка
   }
 }
 
 .form__module--extra {
-  margin-bottom: 34px;
+  position: relative;
+  margin-bottom: 34px; // отступ блока form__module--comment до блока field-submit
 
-  .form__legend {
-    margin-bottom: 39px;
+  &::after {
+    @include form-green-border;
+    top: 14px;
+
+    @media (min-width: $tablet-width) {
+      top: 24px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .form__module--extra {
+    margin-bottom: 54px; // отступ блока form__module--comment до блока field-submit
+  }
+}
+
+.form__module--extra span {
+  position: relative;
+
+  &::before {
+    @include form-white-background;
+    width: 180px;
+
+    @media (min-width: $tablet-width) {
+      width: 260px;
+    }
+  }
+}
+
+.form__module--extra .form__field {
+  margin: 0;
+  margin-bottom: 23px; // расстояние между чекбокс-кнопками
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: 42px;
+    }
+
+    &:nth-last-child(1),
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.form__module--extra .form__legend {
+  margin-bottom: 34px;
+}
+
+@media (min-width: $tablet-width) {
+  .form__module--extra .form__legend {
+    margin-bottom: 57px;
+  }
+}
+
+.form__module-extra-wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
   }
 }
 
 .form__legend {
   @include caption;
+  font-size: 24px;
+  line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.form__submit {
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 82px;
+  }
+}
+
+.form__submit-container {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+  }
+}
+
+.form__button {
+  margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
