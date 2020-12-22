@@ -1,23 +1,130 @@
+.product {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    padding: 0 37px 40px 38px;
+    background-image: linear-gradient(to bottom, transparent 30px, $gray 30px);
+  }
+}
+
+.product__image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  outline: none;
+
+  @media (min-width: $tablet-width) {
+    height: 84px;
+    align-items: flex-end;
+    margin-bottom: 34px;
+    width: 100%;
+  }
+}
+
 .product__title {
   @include caption;
   font-family: $arial;
   font-size: 16px;
   line-height: 20px;
+  width: 100%;
   color: $special-gray;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    width: 195px;
+    margin: 0 auto 21px;
+    text-align: center;
+  }
 }
 
 .product__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  margin: 0;
   font-family: $arial;
   font-size: 12px;
   line-height: 16px;
+
+  dd {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+  }
 }
+
+@media (min-width: $tablet-width) {
+  .product__info {
+    margin-bottom: 33px;
+    font-size: 16px;
+
+    dd,
+    dt {
+      border-bottom: 1px solid $light-gray;
+      padding-top: 8px;
+      padding-bottom: 7px;
+    }
+  }
+}
+
+.product__button {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    min-width: 100%;
+  }
+}
+
+.product--add {
+  position: relative;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    min-width: 30px;
+    min-height: 30px;
+    top: 20px;
+    left: 50%;
+    background-image: url("../img/plus.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .product--add {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 30px;
+    padding: 90px 37px 40px 38px;
+    border: 2px solid $gray;
+    background-color: transparent;
+    background-image: none;
+
+    &::before {
+      top: 20px;
+    }
+  }
+}
+
 
 .product__description {
   @include caption;
   font-size: 16px;
   line-height: 20px;
   margin-bottom: 8px;
+  text-transform: uppercase;
   color: $dark-black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+    margin: 0 auto 23px;
+    width: 150px;
+  }
 }
 
 .product__text {
@@ -26,4 +133,11 @@
   line-height: 16px;
   margin: 0;
   margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0 auto 89px;
+    width: 170px;
+  }
 }

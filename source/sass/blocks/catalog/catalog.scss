@@ -1,23 +1,115 @@
 .catalog {
   border-top: 1px solid $medium-gray;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
 }
 
 .catalog__container {
-  padding-top: 27px;
+  padding: 0; // убирает границы container для серых бордеров
   margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+    margin-bottom: 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+    margin-bottom: 75px;
+  }
 }
 
 .catalog__title {
   @include caption;
+  @include catalog-container;
+  padding-top: 27px;
+  margin-bottom: 41px;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 65px;
+    margin-bottom: 119px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 78px;
+    margin-bottom: 113px;
+  }
 }
 
 .catalog__list {
   @include reset-list;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .catalog__item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 1px solid $ultra-gray;
+  padding: 0 20px 25px; // возвращает границы container
+
+  &:first-of-type {
+    border-top: 1px solid $ultra-gray;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+    }
+  }
+
+
+  @media (min-width: $tablet-width) {
+    width: 45.75%;
+    margin-bottom: 94px;
+    padding: 0;
+    border: none;
+
+
+    &:nth-last-child(1),
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 20%;
+    margin-right: 80px;
+    margin-bottom: 92px;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    &:nth-last-child(3),
+    &:nth-last-child(4) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.catalog__wrapper {
   padding-top: 19px;
-  margin-bottom: 50px;
+  margin-bottom: 22px;
+  width: 50%;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+  }
+}
+
+.catalog__item--add {
+  padding-top: 78px;
+  flex-direction: column;
 }

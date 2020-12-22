@@ -155,7 +155,7 @@
   margin-bottom: 24px; // отступ блока form__module--address до  блока form__module--comment
 
   &::after {
-    @include form-green-border;
+    @include green-border;
     top: 16px;
 
     @media (min-width: $tablet-width) {
@@ -174,11 +174,11 @@
   position: relative;
 
   &::before {
-    @include form-white-background;
-    width: 230px;
+    @include white-background;
+    width: 240px;
 
     @media (min-width: $tablet-width) {
-      width: 560px;
+      width: 570px;
     }
   }
 }
@@ -216,7 +216,7 @@
   margin-bottom: 23px; // отступ блока form__module--comment до блока form__module--extra
 
   &::after {
-    @include form-green-border;
+    @include green-border;
     top: 14px;
 
     @media (min-width: $tablet-width) {
@@ -235,11 +235,11 @@
   position: relative;
 
   &::before {
-    @include form-white-background;
-    width: 160px;
+    @include white-background;
+    width: 170px;
 
     @media (min-width: $tablet-width) {
-      width: 230px;
+      width: 240px;
     }
   }
 }
@@ -259,7 +259,7 @@
   margin-bottom: 34px; // отступ блока form__module--comment до блока field-submit
 
   &::after {
-    @include form-green-border;
+    @include green-border;
     top: 14px;
 
     @media (min-width: $tablet-width) {
@@ -278,11 +278,11 @@
   position: relative;
 
   &::before {
-    @include form-white-background;
-    width: 180px;
+    @include white-background;
+    width: 190px;
 
     @media (min-width: $tablet-width) {
-      width: 260px;
+      width: 270px;
     }
   }
 }
