@@ -19,15 +19,15 @@
 
 .example__wrapper {
   @media (min-width: $desktop-width) {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin: 0 auto;
     padding: 0 110px;
     max-width: 1440px;
-    width: 100%;
 
     .container {
       padding: 0;
+      margin: 0;
     }
   }
 }
@@ -41,6 +41,7 @@
 
   @media (min-width: $desktop-width) {
     padding: 0;
+    width: 610px;
   }
 }
 
@@ -76,8 +77,9 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 70px;
-    margin-bottom: 69px;
     width: 436px;
+    margin: 0;
+    margin-bottom: 69px;
     z-index: 1;
   }
 }
@@ -209,5 +211,9 @@
 
   @media (min-width: $tablet-width) {
     padding-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 610px;
   }
 }

@@ -20,17 +20,60 @@
   }
 }
 
-.page-header__main-nav {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 11px; // отступ от блока main-nav наверх
-  margin-bottom: 17px; // отступ между блоком main-nav и блоком promo
-
+.page-header__container {
   @media (min-width: $tablet-width) {
-    padding-top: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px; // отступ от блока page-header наверх
+    padding-bottom: 20px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 55px;
+    padding-top: 52px;
+  }
+}
+
+.page-header__logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 45px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-sizing: content-box;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.page-header__logo::before {
+  content: "";
+  position: absolute;
+  min-width: 101px;
+  min-height: 18px;
+  left: 42%;
+  background-image: url("../img/header-logo.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.page-header__logo img {
+  width: 33px;
+  height: 38px;
+
+  @media (min-width: $tablet-width) {
+    width: 173px;
+    height: 59px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 202px;
+    height: 60px;
   }
 }
