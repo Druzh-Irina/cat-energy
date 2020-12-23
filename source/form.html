@@ -10,13 +10,15 @@
 </head>
 <body class="page-body">
   <header class="page-header">
-    <div class="container">
+    <div class="container page-header__container">
       <h1 class="visually-hidden">Cat Energy - диетическое питание для кошек</h1>
-      <nav class="main-nav page-header__main-nav">
-        <a class="main-nav__logo logo logo--header" href="index.html">
+        <a class="logo page-header__logo" href="index.html">
           <img src="https://via.placeholder.com/34x38" width="34" height="38" alt="Белый кот в рыжей суперодежде и маске">
         </a>
-        <button class="main-nav__toggle burger" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">Главная</a>
@@ -192,5 +194,6 @@
       </div>
     </section>
   </footer>
+<script src="js/menu.js"></script>
 </body>
 </html>
