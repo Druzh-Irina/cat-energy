@@ -37,6 +37,48 @@
 
   &:disabled {
     border: 2px solid $dark-gray;
+
+    ~ .field-text__email {
+      stroke: $green;
+
+      path,
+      line {
+        stroke: inherit;
+      }
+    }
+
+    ~ .field-text__phone {
+      fill: $green;
+
+      path,
+      line {
+        fill: inherit;
+      }
+    }
+  }
+
+  &:active:invalid,
+  &:focus:invalid,
+  &.invalid {
+    border: 2px solid $red;
+
+    ~ .field-text__email {
+      stroke: $red;
+
+      path,
+      line {
+        stroke: inherit;
+      }
+    }
+
+    ~ .field-text__phone {
+      fill: $red;
+
+      path,
+      line {
+        fill: inherit;
+      }
+    }
   }
 }
 
@@ -99,16 +141,50 @@
 }
 
 // убирает авто-иконки в браузерах
-.field-text__input::-ms-clear {
+.field-text__input::-ms-clear,
+.field-text__input::-ms-reveal {
   display: none;
   width: 0;
   height: 0;
 }
 
-.field-text__input::-ms-reveal {
-  display: none;
-  width: 0;
-  height: 0;
+.field-text--email,
+.field-text--phone {
+  position: relative;
+}
+
+.field-text__email {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 14px;
+  top: 19px;
+  right: 20px;
+
+  @media (min-width: $tablet-width) {
+    right: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 20px;
+  }
+}
+
+.field-text__phone {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  top: 14px;
+  right: 18px;
+
+  @media (min-width: $tablet-width) {
+    right: 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 18px;
+  }
 }
 
 .field-submit__button {
