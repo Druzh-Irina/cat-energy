@@ -22,6 +22,10 @@
   }
 }
 
+.product__image {
+  display: block;
+}
+
 .product__title {
   @include caption;
   font-family: $arial;

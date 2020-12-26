@@ -19,13 +19,14 @@
 
 .example__wrapper {
   @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
     margin: 0 auto;
     padding: 0 110px;
     max-width: 1440px;
 
     .container {
+      min-width: 0;
       padding: 0;
       margin: 0;
     }
@@ -40,8 +41,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0;
-    width: 610px;
+    padding-top: 0;
+    width: 440px;
   }
 }
 
@@ -77,10 +78,10 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 70px;
-    width: 436px;
+    min-width: 0;
+    width: 440px;
     margin: 0;
     margin-bottom: 69px;
-    z-index: 1;
   }
 }
 
@@ -214,6 +215,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 610px;
+    width: 790px;
   }
 }

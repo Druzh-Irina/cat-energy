@@ -12,10 +12,16 @@
       height: 694px;
       background-image:
         linear-gradient(rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 50%),
-        url("../img/index-background-desktop-cat.jpg");
+        url("../img/index-background-desktop-cat@1x.jpg");
       background-repeat: no-repeat;
       background-position: right center;
       background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          linear-gradient(rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 50%),
+          url("../img/index-background-desktop-cat@2x.jpg");
+      }
     }
   }
 }
@@ -61,6 +67,10 @@
   background-image: url("../img/header-logo.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .page-header__logo img {

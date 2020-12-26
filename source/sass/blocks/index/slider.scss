@@ -11,8 +11,14 @@
   }
 }
 
-.slider__pictures {
+.slider__list {
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 27px;
+}
+
+.slider__slide--after {
+  display: none;
 }
 
 .slider__slide-image {
@@ -26,6 +32,7 @@
 }
 
 .slider__toggle {
+  font-family: $oswald;
   font-size: 16px;
   line-height: 20px;
   padding: 0;

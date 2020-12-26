@@ -2,10 +2,16 @@
   background-size: 100%;
   background-image:
     linear-gradient(to top, $white 177px, rgba(104, 183, 56, 0.85) 177px),
-    url("../img/index-background-cat.jpg");
+    url("../img/index-background-mobile-cat@1x.jpg");
   background-repeat: no-repeat;
   background-position: top;
   background-color: rgba(104, 183, 56, 0.85);
+
+  @media (min-resolution: 2dppx) {
+    background-image:
+      linear-gradient(to top, $white 177px, rgba(104, 183, 56, 0.85) 177px),
+      url("../img/index-background-mobile-cat@2x.jpg");
+  }
 
   @media (min-width: $tablet-width) {
     background: none;
@@ -19,7 +25,7 @@
   @media (min-width: $tablet-width) {
     padding-top: 62px; // отступ от заголовка promo__title в блоке promo
     padding-left: 117px;
-    margin-bottom: 200px; // отступ между блоком promo и блоком program
+    margin-bottom: 545px; // отступ между блоком promo и блоком program
   }
 
   @media (min-width: $desktop-width) {
@@ -59,6 +65,7 @@
 }
 
 .promo__text {
+  position: relative;
   margin: 0 auto;
   margin-bottom: 28px;
   line-height: 14px;
@@ -89,7 +96,7 @@
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    top: 270px;
+    bottom: 385px;
     left: 0;
     right: 0;
     margin-bottom: 0;
@@ -97,7 +104,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: 100px;
+    top: 150px;
+    right: -227px;
   }
 }
 

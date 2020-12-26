@@ -32,7 +32,7 @@
 }
 
 .main-nav--closed .main-nav__toggle::before,
-.main-nav--closed .main-nav__toggle::after {
+.main-nav--show .main-nav__toggle::before {
   content: "";
   position: absolute;
   top: 6px;
@@ -43,24 +43,8 @@
   box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
 }
 
-.main-nav--closed .main-nav__toggle:active::before {
-  background-color: fade($black, 30%);
-  box-shadow:
-    0 8px 0 0 fade($black, 30%),
-    0 16px 0 0 fade($black, 30%);
-}
-
-@media (max-width: $mobile-width) {
-  .main-nav--closed .main-nav__item {
-    display: none;
-
-    .main-nav__item .main-nav__link--active {
-      display: block;
-    }
-  }
-}
-
-.main-nav--opened .main-nav__toggle {
+.main-nav--opened .main-nav__toggle,
+.main-nav--hidden .main-nav__toggle {
   top: -40px;
   left: auto;
   right: 20px;
@@ -74,7 +58,6 @@
     width: 30px;
     height: 2px;
     background-color: $black;
-    transition: top 0.3s, transform 0.3s 0.5s;
   }
 
   &::before {
@@ -92,18 +75,18 @@
   }
 }
 
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+}
+
 .main-nav__list {
   @include reset-list;
-  display: none;
-
-  .main-nav--no-js &,
-  .main-nav--opened & {
-    display: block;
-
-    @media (min-width: $tablet-width) {
-      display: flex;
-    }
-  }
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -142,9 +125,11 @@
 .main-nav__link {
   position: relative;
   font-weight: $font-weight-medium;
+  width: 100%;
   font-size: 20px;
   line-height: 20px;
-  padding: 22px 20px 24px;
+  padding-top: 22px;
+  padding-bottom: 24px;
   background-color: transparent;
 
   @media (min-width: $tablet-width) {
