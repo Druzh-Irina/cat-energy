@@ -31,8 +31,7 @@
   }
 }
 
-.main-nav--closed .main-nav__toggle::before,
-.main-nav--show .main-nav__toggle::before {
+.main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
   top: 6px;
@@ -43,8 +42,7 @@
   box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
 }
 
-.main-nav--opened .main-nav__toggle,
-.main-nav--hidden .main-nav__toggle {
+.main-nav--opened .main-nav__toggle {
   top: -40px;
   left: auto;
   right: 20px;
@@ -82,6 +80,15 @@
 
   .main-nav--nojs .main-nav__toggle {
     display: none;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    position: static;
+    min-height: 0;
+  }
+
+  .main-nav--nojs .main-nav__item {
+    display: block;
   }
 }
 
