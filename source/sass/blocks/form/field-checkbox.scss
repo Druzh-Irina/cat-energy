@@ -22,7 +22,7 @@
     height: 30px;
     border: 1px solid $light-gray;
 
-    @media (min-width: $tablet-width) {
+    @include tablet {
       bottom: -5px;
       left: 1px;
       width: 40px;
@@ -39,14 +39,14 @@
     background-repeat: no-repeat;
     opacity: 0;
 
-    @media (min-width: $tablet-width) {
+    @include tablet {
       top: 8px;
       left: 12px;
     }
   }
 }
 
-@media (min-width: $tablet-width) {
+@include tablet {
   .field-checkbox__label {
     font-size: 20px;
     line-height: 30px;

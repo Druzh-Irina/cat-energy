@@ -1,5 +1,5 @@
 .product {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: flex;
     flex-direction: column;
     padding: 0 37px 40px 38px;
@@ -14,7 +14,7 @@
   width: 50%;
   outline: none;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     height: 84px;
     align-items: flex-end;
     margin-bottom: 34px;
@@ -34,7 +34,7 @@
   width: 100%;
   color: $special-gray;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 20px;
     line-height: 24px;
     width: 195px;
@@ -59,7 +59,7 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@include tablet {
   .product__info {
     margin-bottom: 33px;
     font-size: 16px;
@@ -76,7 +76,7 @@
 .product__button {
   width: 100%;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     min-width: 100%;
   }
 }
@@ -98,7 +98,7 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@include tablet {
   .product--add {
     display: inline-block;
     vertical-align: top;
@@ -123,7 +123,7 @@
   text-transform: uppercase;
   color: $dark-black;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 20px;
     line-height: 22px;
     margin: 0 auto 23px;
@@ -138,7 +138,7 @@
   margin: 0;
   margin-bottom: 21px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 16px;
     line-height: 18px;
     margin: 0 auto 89px;

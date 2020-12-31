@@ -1,12 +1,12 @@
 .slider {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     background-image: linear-gradient(to left, $gray 50%, $example-gray 50%);
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: 100% 462px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     background-image: linear-gradient(to right, $gray 59%, $example-gray 59%);
   }
 }
@@ -15,14 +15,14 @@
   display: flex;
   flex-wrap: wrap;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     position: relative;
     display: block;
     max-width: 708px;
     margin: 0 auto;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     .slider__list {
       display: flex;
       flex-direction: column;
@@ -45,11 +45,9 @@
   position: absolute;
   overflow: hidden;
   z-index: 5;
-  padding-bottom: 30px;
-  background-color: $example-gray;
 }
 
-@media (min-width: $tablet-width) {
+@include tablet {
   .slider__slide {
     min-height: 517px;
     padding-bottom: 19px;
@@ -58,11 +56,11 @@
   }
 
   .slider__slide--before {
-    top: 0;
+    top: 3px;
     left: 0;
     width: 50%;
     height: 100%;
-    background-image: linear-gradient(to bottom, $white 34%, $example-gray 34%);
+    background-image: linear-gradient(to bottom, $white 37%, $example-gray 37%);
 
     .slider__slide-image {
       margin-left: 16px;
@@ -70,7 +68,8 @@
   }
 
   .slider__slide--after {
-    background-image: linear-gradient(to bottom, $white 34%, $gray 34%);
+    top: 3px;
+    background-image: linear-gradient(to bottom, $white 37%, $gray 37%);
 
     .slider__slide-image {
       margin-left: 107px;
@@ -78,7 +77,7 @@
   }
 }
 
-@media (min-width: $desktop-width) {
+@include desktop {
   .slider__slide {
     flex-grow: 1;
     padding-bottom: 20px;
@@ -86,7 +85,7 @@
 
   .slider__slide--before {
     width: calc(59%);
-    background-image: linear-gradient(to bottom, $white 25%, $gray 25%);
+    background-image: linear-gradient(to bottom, $white 23%, $gray 23%);
 
     .slider__slide-image {
       margin-left: 40px;
@@ -94,7 +93,7 @@
   }
 
   .slider__slide--after {
-    background-image: linear-gradient(to bottom, $white 25%, $example-gray 25%);
+    background-image: linear-gradient(to bottom, $white 23%, $example-gray 23%);
 
     .slider__slide-image {
       padding-left: 27px;
@@ -106,10 +105,13 @@
   display: block;
   max-width: 280px;
   margin: 0 auto;
+  background-color: $example-gray;
+  padding-bottom: 30px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     max-width: 690px;
     margin: 0;
+    background-color: transparent;
   }
 }
 
@@ -118,7 +120,7 @@
   justify-content: center;
   align-items: center;
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     justify-content: flex-end;
   }
 }
@@ -137,7 +139,7 @@
   color: $black;
   cursor: pointer;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 20px;
     line-height: 30px;
   }
@@ -162,7 +164,7 @@
   background-color: $white;
   box-sizing: border-box;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 428px;
     height: 6px;
     margin: 15px 20px;
@@ -180,7 +182,7 @@
   background-color: $green;
   border-radius: 6px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: flex;
     top: -12px;
     left: 199px;

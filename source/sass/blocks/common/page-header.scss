@@ -1,4 +1,6 @@
-@media (min-width: $desktop-width) {
+$gradient: linear-gradient(rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 50%);
+
+@include desktop {
   .page-header--index {
     position: relative;
 
@@ -11,15 +13,15 @@
       z-index: -1;
       height: 694px;
       background-image:
-        linear-gradient(rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 50%),
+        $gradient,
         url("../img/index-background-desktop-cat@1x.jpg");
       background-repeat: no-repeat;
       background-position: right center;
       background-size: cover;
 
-      @media (min-resolution: 2dppx) {
+      @include retina() {
         background-image:
-          linear-gradient(rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 50%),
+          $gradient,
           url("../img/index-background-desktop-cat@2x.jpg");
       }
     }
@@ -27,7 +29,7 @@
 }
 
 .page-header__container {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,7 +37,7 @@
     padding-bottom: 20px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     padding-top: 52px;
   }
 }
@@ -68,7 +70,7 @@
   background-repeat: no-repeat;
   background-position: 0 0;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: none;
   }
 }
@@ -77,12 +79,12 @@
   width: 33px;
   height: 38px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 173px;
     height: 59px;
   }
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 202px;
     height: 60px;
   }

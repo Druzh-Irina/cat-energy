@@ -5,7 +5,7 @@
     @include green-border;
     top: 15px;
 
-    @media (min-width: $tablet-width) {
+    @include tablet {
       top: 21px;
     }
   }
@@ -18,7 +18,7 @@
     @include white-background;
     width: 275px;
 
-    @media (min-width: $tablet-width) {
+    @include tablet {
       width: 395px;
     }
   }
@@ -27,11 +27,11 @@
 .extra__container {
   margin-bottom: 35px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-bottom: 76px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     padding: 0 110px;
     margin-bottom: 0;
 
@@ -47,7 +47,7 @@
   line-height: 24px;
   margin-bottom: 36px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 81px;
@@ -56,7 +56,7 @@
 }
 
 .extra__flex-wrapper {
-  @media (min-width: $desktop-width) {
+  @include desktop {
     display: flex;
     justify-content: space-between;
     margin-bottom: 86px;
@@ -78,13 +78,13 @@
     padding-bottom: 19px;
   }
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     justify-content: space-between;
     flex-direction: row;
     width: 895px;
@@ -99,14 +99,14 @@
   margin-bottom: 13px;
   color: $special-gray;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 20px;
     line-height: 20px;
     margin: 0;
     padding-left: 38px;
   }
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 305px;
   }
 }
@@ -119,13 +119,13 @@
   margin: 0;
   margin-bottom: 12px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 16px;
     line-height: 20px;
     padding-right: 38px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     margin-bottom: 0;
     width: 287px;
   }
@@ -134,11 +134,11 @@
 .extra__item-info dd {
   margin: 0;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-left: 49px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     margin: 0;
   }
 }
@@ -146,11 +146,11 @@
 .extra__item-button {
   width: 100%;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin: 0 38px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     min-width: 244px;
     width: 244px;
     margin: 0;
@@ -167,7 +167,7 @@
   background-position: center top 58px, center;
   background-size: 78px 80px, cover;
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     min-width: 245px;
     width: 245px;
     margin: 0;
