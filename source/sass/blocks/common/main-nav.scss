@@ -5,11 +5,11 @@
   margin: 0 -20px;
   background-color: $white;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin: 0;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     background-color: transparent;
   }
 }
@@ -26,13 +26,12 @@
   border: none;
   z-index: 2;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: none;
   }
 }
 
-.main-nav--closed .main-nav__toggle::before,
-.main-nav--closed .main-nav__toggle::after {
+.main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
   top: 6px;
@@ -41,23 +40,6 @@
   height: 2px;
   background-color: $black;
   box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
-}
-
-.main-nav--closed .main-nav__toggle:active::before {
-  background-color: fade($black, 30%);
-  box-shadow:
-    0 8px 0 0 fade($black, 30%),
-    0 16px 0 0 fade($black, 30%);
-}
-
-@media (max-width: $mobile-width) {
-  .main-nav--closed .main-nav__item {
-    display: none;
-
-    .main-nav__item .main-nav__link--active {
-      display: block;
-    }
-  }
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -74,7 +56,6 @@
     width: 30px;
     height: 2px;
     background-color: $black;
-    transition: top 0.3s, transform 0.3s 0.5s;
   }
 
   &::before {
@@ -92,20 +73,29 @@
   }
 }
 
-.main-nav__list {
-  @include reset-list;
-  display: none;
-
-  .main-nav--no-js &,
-  .main-nav--opened & {
-    display: block;
-
-    @media (min-width: $tablet-width) {
-      display: flex;
-    }
+@include max-width-mobile {
+  .main-nav--closed .main-nav__item {
+    display: none;
   }
 
-  @media (min-width: $tablet-width) {
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    position: static;
+    min-height: 0;
+  }
+
+  .main-nav--nojs .main-nav__item {
+    display: block;
+  }
+}
+
+.main-nav__list {
+  @include reset-list;
+
+  @include tablet {
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
@@ -120,7 +110,7 @@
   }
 }
 
-@media (min-width: $desktop-width) {
+@include desktop {
   .main-nav__list--index a {
     color: $white;
   }
@@ -134,7 +124,7 @@
   border-top: 1px solid $extra-gray;
   text-align: center;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     border: none;
   }
 }
@@ -142,19 +132,21 @@
 .main-nav__link {
   position: relative;
   font-weight: $font-weight-medium;
+  width: 100%;
   font-size: 20px;
   line-height: 20px;
-  padding: 22px 20px 24px;
+  padding-top: 22px;
+  padding-bottom: 24px;
   background-color: transparent;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-weight: $font-weight-normal;
     font-size: 18px;
     line-height: 24px;
     padding: 0;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     font-size: 20px;
     line-height: 30px;
   }
@@ -178,7 +170,7 @@
     opacity: 1;
   }
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     border-bottom: 2px solid $green;
   }
 }

@@ -6,7 +6,7 @@
   text-transform: uppercase;
   cursor: pointer;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 20px;
     line-height: 30px;
   }
@@ -82,7 +82,7 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@include tablet {
   .field-text__input {
     font-size: 20px;
     line-height: 30px;
@@ -95,7 +95,7 @@
   }
 }
 
-@media (min-width: $desktop-width) {
+@include desktop {
   .field-text__input,
   .field-text--textarea {
     margin-right: 0;
@@ -161,11 +161,11 @@
   top: 19px;
   right: 20px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     right: 60px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     right: 20px;
   }
 }
@@ -178,11 +178,11 @@
   top: 14px;
   right: 18px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     right: 58px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     right: 18px;
   }
 }
@@ -190,7 +190,7 @@
 .field-submit__button {
   width: 100%;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 20px;
     padding: 13px 45px;
     width: auto;
@@ -203,7 +203,7 @@
   font-family: $arial;
   text-align: center;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 16px;
     text-align: left;
   }

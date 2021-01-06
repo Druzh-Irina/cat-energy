@@ -1,12 +1,12 @@
 .example {
   background-color: $example-gray;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     background-color: transparent;
     border-top: 1px solid $extra-gray;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     border-top: none;
     background-image:
       linear-gradient(to bottom, $white 135px, transparent 135px),
@@ -18,14 +18,15 @@
 }
 
 .example__wrapper {
-  @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  @include desktop {
+    display: flex;
+    flex-direction: row;
     margin: 0 auto;
     padding: 0 110px;
     max-width: 1440px;
 
     .container {
+      min-width: 0;
       padding: 0;
       margin: 0;
     }
@@ -35,12 +36,12 @@
 .example__container {
   padding-top: 27px; // отступ от заголовка
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     padding-top: 43px;
   }
 
-  @media (min-width: $desktop-width) {
-    padding: 0;
+  @include desktop {
+    padding-top: 0;
     width: 610px;
   }
 }
@@ -51,13 +52,13 @@
   line-height: 40px;
   margin-bottom: 33px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 63px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     margin-bottom: 76px;
   }
 }
@@ -67,7 +68,7 @@
   margin-bottom: 25px;
   font-family: $arial;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 54px;
@@ -75,23 +76,23 @@
     word-spacing: 0.5px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     padding-top: 70px;
-    width: 436px;
+    min-width: 0;
+    width: 440px;
     margin: 0;
     margin-bottom: 69px;
-    z-index: 1;
   }
 }
 
 .example__statistics {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: flex;
     justify-content: space-between;
     margin-bottom: 67px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     flex-direction: column;
     width: 366px;
     margin-bottom: 0;
@@ -112,7 +113,7 @@
   box-sizing: border-box;
   margin-bottom: 34px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     min-width: 162px;
     height: 72px;
     margin-bottom: 0;
@@ -122,7 +123,7 @@
     }
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     margin-bottom: 60px;
   }
 }
@@ -135,7 +136,7 @@
   text-transform: uppercase;
   color: $black;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 30px;
     line-height: 37px;
   }
@@ -163,7 +164,7 @@
   text-transform: lowercase;
   background-color: $example-gray;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     left: 5px;
     top: 63px;
     width: 150px;
@@ -172,7 +173,7 @@
     background-color: $white;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     background-color: $gray;
   }
 }
@@ -186,7 +187,7 @@
   text-transform: uppercase;
   color: $black;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
@@ -195,7 +196,7 @@
     line-height: 20px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     justify-content: flex-end;
     flex-wrap: nowrap;
     width: 330px;
@@ -209,11 +210,11 @@
 .example__slider {
   padding-bottom: 31px; // отступ до конца фона в блоке example
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     padding-bottom: 70px;
   }
 
-  @media (min-width: $desktop-width) {
-    width: 610px;
+  @include desktop {
+    width: 790px;
   }
 }

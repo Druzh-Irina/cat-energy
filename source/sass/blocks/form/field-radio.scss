@@ -22,7 +22,7 @@
     height: 30px;
     border: 1px solid $light-gray;
 
-    @media (min-width: $tablet-width) {
+    @include tablet {
       bottom: -5px;
       left: 20px;
       width: 40px;
@@ -38,7 +38,7 @@
     background-color: $green;
     opacity: 0;
 
-    @media (min-width: $tablet-width) {
+    @include tablet {
       top: 5px;
       left: 31px;
       width: 18px;
@@ -47,7 +47,7 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@include tablet {
   .field-radio__label {
     font-size: 20px;
     line-height: 30px;

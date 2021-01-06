@@ -1,7 +1,7 @@
 .catalog {
   border-top: 1px solid $medium-gray;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     border: none;
   }
 }
@@ -10,12 +10,12 @@
   padding: 0; // убирает границы container для серых бордеров
   margin-bottom: 25px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     padding: 0 30px;
     margin-bottom: 68px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     padding: 0 110px;
     margin-bottom: 75px;
   }
@@ -29,23 +29,23 @@
   font-size: 36px;
   line-height: 36px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     padding-top: 65px;
-    margin-bottom: 119px;
+    margin-bottom: 190px;
     font-size: 60px;
     line-height: 60px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     padding-top: 78px;
-    margin-bottom: 113px;
+    margin-bottom: 180px;
   }
 }
 
 .catalog__list {
   @include reset-list;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -62,15 +62,14 @@
   &:first-of-type {
     border-top: 1px solid $ultra-gray;
 
-    @media (min-width: $tablet-width) {
+    @include tablet {
       border: none;
     }
   }
 
-
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 45.75%;
-    margin-bottom: 94px;
+    margin-bottom: 140px;
     padding: 0;
     border: none;
 
@@ -81,10 +80,10 @@
     }
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 20%;
     margin-right: 80px;
-    margin-bottom: 92px;
+    margin-bottom: 150px;
 
     &:nth-child(4n) {
       margin-right: 0;
@@ -102,7 +101,7 @@
   margin-bottom: 22px;
   width: 50%;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     padding-top: 0;
     margin-bottom: 0;
     width: 100%;

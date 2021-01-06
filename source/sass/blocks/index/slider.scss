@@ -1,31 +1,133 @@
 .slider {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     background-image: linear-gradient(to left, $gray 50%, $example-gray 50%);
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: 100% 462px;
   }
 
-  @media (min-width: $desktop-width) {
-    background-image: linear-gradient(to right, $gray 50%, $example-gray 50%);
+  @include desktop {
+    background-image: linear-gradient(to right, $gray 59%, $example-gray 59%);
   }
 }
 
-.slider__pictures {
-  margin-bottom: 27px;
+.slider__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include tablet {
+    position: relative;
+    display: block;
+    max-width: 708px;
+    margin: 0 auto;
+  }
+
+  @include desktop {
+    .slider__list {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      min-width: auto;
+      width: 690px;
+      margin: 0;
+    }
+  }
+}
+
+.slider__slide {
+  position: relative;
+  min-height: 215px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.slider__slide--before {
+  position: absolute;
+  overflow: hidden;
+  right: 10px;
+  z-index: 5;
+}
+
+@include tablet {
+  .slider__slide {
+    min-height: 517px;
+    padding-bottom: 19px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
+
+  .slider__slide--before {
+    top: 3px;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, $white 37%, $example-gray 37%);
+
+    .slider__slide-image {
+      margin-left: 16px;
+    }
+  }
+
+  .slider__slide--after {
+    top: 3px;
+    background-image: linear-gradient(to bottom, $white 37%, $gray 37%);
+
+    .slider__slide-image {
+      margin-left: 107px;
+    }
+  }
+}
+
+@include desktop {
+  .slider__slide {
+    flex-grow: 1;
+    padding-bottom: 20px;
+  }
+
+  .slider__slide--before {
+    width: calc(59%);
+    background-image: linear-gradient(to bottom, $white 23%, $gray 23%);
+
+    .slider__slide-image {
+      margin-left: 40px;
+    }
+  }
+
+  .slider__slide--after {
+    background-image: linear-gradient(to bottom, $white 23%, $example-gray 23%);
+
+    .slider__slide-image {
+      padding-left: 27px;
+    }
+  }
 }
 
 .slider__slide-image {
   display: block;
+  max-width: 280px;
   margin: 0 auto;
+  background-color: $example-gray;
+  padding-bottom: 30px;
+
+  @include tablet {
+    max-width: 690px;
+    margin: 0;
+    background-color: transparent;
+  }
 }
 
 .slider__toggles {
   display: flex;
   justify-content: center;
+  align-items: center;
+
+  @include desktop {
+    justify-content: flex-end;
+  }
 }
 
 .slider__toggle {
+  font-family: $oswald;
   font-size: 16px;
   line-height: 20px;
   padding: 0;
@@ -38,7 +140,7 @@
   color: $black;
   cursor: pointer;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 20px;
     line-height: 30px;
   }
@@ -63,7 +165,7 @@
   background-color: $white;
   box-sizing: border-box;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 428px;
     height: 6px;
     margin: 15px 20px;
@@ -81,7 +183,7 @@
   background-color: $green;
   border-radius: 6px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: flex;
     top: -12px;
     left: 199px;
