@@ -92,7 +92,7 @@
     left: 30px;
     width: 36px;
     height: 49px;
-    background: url("../img/program-slim-cat.svg") no-repeat center;
+    background: url("../img/svg/program-slim-cat.svg") no-repeat center;
   }
 
   @include tablet {
@@ -143,7 +143,7 @@
     left: 13px;
     width: 67px;
     height: 28px;
-    background: url("../img/program-pro-cat.svg") no-repeat center;
+    background: url("../img/svg/program-pro-cat.svg") no-repeat center;
   }
 
   @include tablet {
@@ -157,9 +157,9 @@
 
     &::after {
       top: 75px;
-      right: 78px;
+      right: 28px;
       left: auto;
-      width: 168px;
+      width: 268px;
       height: 112px;
     }
   }
@@ -242,7 +242,7 @@
     right: -35px;
     width: 24px;
     height: 12px;
-    background-image: url("../img/arrow.svg");
+    background-image: url("../img/svg/arrow.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
   }

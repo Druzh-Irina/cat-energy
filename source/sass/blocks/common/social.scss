@@ -1,0 +1,56 @@
+.social__item {
+  position: relative;
+}
+
+.social__icon {
+  fill: $over-gray;
+
+  &:hover,
+  &:focus {
+    fill: $green;
+  }
+
+  &:active {
+    fill: $green;
+    opacity: 0.3;
+  }
+}
+
+.social__icon--facebook {
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  width: 10px;
+  height: 18px;
+
+  @include tablet {
+    width: 13px;
+    height: 27px;
+  }
+}
+
+.social__icon--instagram {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  width: 16px;
+  height: 16px;
+
+  @include tablet {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.social__icon--vkontakte {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 22px;
+  height: 12px;
+
+  @include tablet {
+    width: 29px;
+    height: 17px;
+  }
+}
