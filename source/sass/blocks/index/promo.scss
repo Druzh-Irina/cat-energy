@@ -4,7 +4,7 @@ $gradient: linear-gradient(to top, $white 177px, rgba(104, 183, 56, 0.85) 177px)
   background-size: 100%;
   background-image:
     $gradient,
-    url("../img/index-background-mobile-cat@1x.jpg");
+    url("../img/raster/index-background-mobile-cat@1x.jpg");
   background-repeat: no-repeat;
   background-position: top;
   background-color: rgba(104, 183, 56, 0.85);
@@ -12,7 +12,7 @@ $gradient: linear-gradient(to top, $white 177px, rgba(104, 183, 56, 0.85) 177px)
   @include retina() {
     background-image:
       $gradient,
-      url("../img/index-background-mobile-cat@2x.jpg");
+      url("../img/raster/index-background-mobile-cat@2x.jpg");
   }
 
   @include tablet {

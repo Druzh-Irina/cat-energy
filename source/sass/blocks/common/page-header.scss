@@ -14,7 +14,7 @@ $gradient: linear-gradient(rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85
       height: 694px;
       background-image:
         $gradient,
-        url("../img/index-background-desktop-cat@1x.jpg");
+        url("../img/raster/index-background-desktop-cat@1x.jpg");
       background-repeat: no-repeat;
       background-position: right center;
       background-size: cover;
@@ -22,7 +22,7 @@ $gradient: linear-gradient(rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85
       @include retina() {
         background-image:
           $gradient,
-          url("../img/index-background-desktop-cat@2x.jpg");
+          url("../img/raster/index-background-desktop-cat@2x.jpg");
       }
     }
   }
@@ -66,7 +66,7 @@ $gradient: linear-gradient(rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85
   min-width: 101px;
   min-height: 18px;
   left: 42%;
-  background-image: url("../img/header-logo.svg");
+  background-image: url("../img/svg/header-logo.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 

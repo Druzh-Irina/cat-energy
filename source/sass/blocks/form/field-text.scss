@@ -38,22 +38,8 @@
   &:disabled {
     border: 2px solid $dark-gray;
 
-    ~ .field-text__email {
-      stroke: $green;
-
-      path,
-      line {
-        stroke: inherit;
-      }
-    }
-
-    ~ .field-text__phone {
+    ~ .field-text__icon {
       fill: $green;
-
-      path,
-      line {
-        fill: inherit;
-      }
     }
   }
 
@@ -62,22 +48,8 @@
   &.invalid {
     border: 2px solid $red;
 
-    ~ .field-text__email {
-      stroke: $red;
-
-      path,
-      line {
-        stroke: inherit;
-      }
-    }
-
-    ~ .field-text__phone {
+    ~ .field-text__icon {
       fill: $red;
-
-      path,
-      line {
-        fill: inherit;
-      }
     }
   }
 }
@@ -153,10 +125,13 @@
   position: relative;
 }
 
-.field-text__email {
+.field-text__icon {
   position: absolute;
   display: block;
   width: 20px;
+}
+
+.field-text__email {
   height: 14px;
   top: 19px;
   right: 20px;
@@ -171,9 +146,6 @@
 }
 
 .field-text__phone {
-  position: absolute;
-  display: block;
-  width: 20px;
   height: 20px;
   top: 14px;
   right: 18px;

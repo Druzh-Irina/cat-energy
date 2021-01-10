@@ -15,8 +15,9 @@
   padding-bottom: 22px; // отступ секции page-footer__links с сохранением фона
 
   @include tablet {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     padding-top: 55px;
     padding-bottom: 61px;
   }
@@ -38,6 +39,15 @@
   }
 }
 
+.page-footer__logo-title:hover,
+.page-footer__logo-title:focus {
+  opacity: 0.8;
+}
+
+.page-footer__logo-title:active {
+  opacity: 0.6;
+}
+
 .page-footer__social {
   @include reset-list;
   display: grid;
@@ -53,33 +63,35 @@
 }
 
 .page-footer__copyright {
-  border-top: 1px solid $medium-gray;
-  padding-top: 22px 0;
-
-  @include tablet {
-    width: 173px;
-    padding: 0;
-    border: none;
-  }
-}
-
-.page-footer__copyright-name {
-  font-family: $arial;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 21px;
+  padding-bottom: 20px;
   font-size: 16px;
-  padding-top: 6px;
+  font-family: $arial;
   color: $dark-gray;
-}
+  outline: none;
 
-.page-footer__copyright-name:hover,
-.page-footer__copyright-name:focus {
-  opacity: 1;
+  &:hover,
+  &:focus {
+    .page-footer__copyright-icon {
+      fill: $green;
+    }
+  }
 
   &:active {
     opacity: 0.3;
   }
+
+  @include tablet {
+    width: 173px;
+    padding: 0;
+  }
 }
 
 .page-footer__copyright-icon {
+  fill: $over-gray;
   width: 27px;
   height: 34px;
 }
