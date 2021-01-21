@@ -6,7 +6,7 @@
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2">
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page-body">
   <header class="page-header">
@@ -18,8 +18,11 @@
             <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg">
             <img src="img/svg/logo-mobile.svg" width="34" height="38" alt="Белый кот в рыжей суперодежде и маске">
           </picture>
+          <svg class="page-header__logo-title" xmlns="http://www.w3.org/2000/svg" width="101" height="18" aria-label="Cat Energy">
+          <use xlink:href="img/svg/sprite.svg#header-logo"></use>
+          </svg>
         </a>
-        <nav class="main-nav main-nav--opened main-nav--nojs"> <!--класс main-nav--opened - открытое мобильное меню при отключении js, main-nav--closed - закрытое мобильное меню -->
+        <nav class="main-nav main-nav--closed main-nav--nojs"> <!--класс main-nav-nojs - открытое мобильное меню при отключении js -->
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -45,7 +48,7 @@
       <div class="container catalog__container">
         <ul class="catalog__list">
           <li class="catalog__item product">
-            <a class="product__image-wrapper" href="product-1.html">
+            <a class="product__image-wrapper product__image-wrapper--item-1" href="product-1.html">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/raster/chicken-small-desktop@1x.webp 1x, img/raster/chicken-small-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/raster/chicken-small-tablet@1x.webp 1x, img/raster/chicken-small-tablet@2x.webp 2x">
@@ -57,7 +60,7 @@
               </picture>
             </a>
             <div class="catalog__wrapper">
-              <h3 class="product__title"><a href="product-1.html">Cat Energy Pro 500 г</a></h3>
+              <h3 class="product__title"><a href="product-1.html">Cat Energy Pro <br>500 г</a></h3>
               <dl class="product__info">
                 <dt>Масса</dt>
                 <dd>500 г</dd>
@@ -71,7 +74,7 @@
           </li>
 
           <li class="catalog__item product">
-            <a class="product__image-wrapper" href="product-2.html">
+            <a class="product__image-wrapper product__image-wrapper--item-2" href="product-2.html">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/raster/chicken-big-desktop@1x.webp 1x, img/raster/chicken-big-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/raster/chicken-big-tablet@1x.webp 1x, img/raster/chicken-big-tablet@2x.webp 2x">
@@ -83,7 +86,7 @@
               </picture>
             </a>
             <div class="catalog__wrapper">
-              <h3 class="product__title"><a href="product-2.html">Cat Energy Pro 1000 г</a></h3>
+              <h3 class="product__title"><a href="product-2.html">Cat Energy Pro<br> 1000 г</a></h3>
               <dl class="product__info">
                 <dt>Масса</dt>
                 <dd>1000 г</dd>
@@ -97,7 +100,7 @@
           </li>
 
           <li class="catalog__item product">
-            <a class="product__image-wrapper" href="product-3.html">
+            <a class="product__image-wrapper product__image-wrapper--item-3" href="product-3.html">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/raster/fish-small-desktop@1x.webp 1x, img/raster/fish-small-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/raster/fish-small-tablet@1x.webp 1x, img/raster/fish-small-tablet@2x.webp 2x">
@@ -109,7 +112,7 @@
               </picture>
             </a>
             <div class="catalog__wrapper">
-              <h3 class="product__title"><a href="product-3.html">Cat Energy Pro 500 г</a></h3>
+              <h3 class="product__title"><a href="product-3.html">Cat Energy Pro<br> 500 г</a></h3>
               <dl class="product__info">
                 <dt>Масса</dt>
                 <dd>500 г</dd>
@@ -123,7 +126,7 @@
           </li>
 
           <li class="catalog__item product">
-            <a class="product__image-wrapper" href="product-4.html">
+            <a class="product__image-wrapper product__image-wrapper--item-4" href="product-4.html">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/raster/fish-big-desktop@1x.webp 1x, img/raster/fish-big-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/raster/fish-big-tablet@1x.webp 1x, img/raster/fish-big-tablet@2x.webp 2x">
@@ -135,7 +138,7 @@
               </picture>
             </a>
             <div class="catalog__wrapper">
-              <h3 class="product__title"><a href="product-4.html">Cat Energy Pro 1000 г</a></h3>
+              <h3 class="product__title"><a href="product-4.html">Cat Energy Pro<br> 1000 г</a></h3>
               <dl class="product__info">
                 <dt>Масса</dt>
                 <dd>1000 г</dd>
@@ -149,7 +152,7 @@
           </li>
 
           <li class="catalog__item product">
-            <a class="product__image-wrapper" href="product-5.html">
+            <a class="product__image-wrapper product__image-wrapper--item-5" href="product-5.html">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/raster/buckwheat-small-desktop@1x.webp 1x, img/raster/buckwheat-small-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/raster/buckwheat-small-tablet@1x.webp 1x, img/raster/buckwheat-small-tablet@2x.webp 2x">
@@ -161,7 +164,7 @@
               </picture>
             </a>
             <div class="catalog__wrapper">
-              <h3 class="product__title"><a href="product-5.html">Cat Energy Slim 500 г</a></h3>
+              <h3 class="product__title"><a href="product-5.html">Cat Energy Slim<br> 500 г</a></h3>
               <dl class="product__info">
                 <dt>Масса</dt>
                 <dd>500 г</dd>
@@ -175,7 +178,7 @@
           </li>
 
           <li class="catalog__item product">
-            <a class="product__image-wrapper" href="product-6.html">
+            <a class="product__image-wrapper product__image-wrapper--item-6" href="product-6.html">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/raster/buckwheat-big-desktop@1x.webp 1x, img/raster/buckwheat-big-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/raster/buckwheat-big-tablet@1x.webp 1x, img/raster/buckwheat-big-tablet@2x.webp 2x">
@@ -187,7 +190,7 @@
               </picture>
             </a>
             <div class="catalog__wrapper">
-              <h3 class="product__title"><a href="product-6.html">Cat Energy Slim 1000 г</a></h3>
+              <h3 class="product__title"><a href="product-6.html">Cat Energy Slim<br> 1000 г</a></h3>
               <dl class="product__info">
                 <dt>Масса</dt>
                 <dd>1000 г</dd>
@@ -201,7 +204,7 @@
           </li>
 
           <li class="catalog__item product">
-            <a class="product__image-wrapper" href="product-7.html">
+            <a class="product__image-wrapper product__image-wrapper--item-7" href="product-7.html">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/raster/rice-small-desktop@1x.webp 1x, img/raster/rice-small-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/raster/rice-small-tablet@1x.webp 1x, img/raster/rice-small-tablet@2x.webp 2x">
@@ -213,7 +216,7 @@
               </picture>
             </a>
             <div class="catalog__wrapper">
-              <h3 class="product__title"><a href="product-7.html">Cat Energy Slim 500 г</a></h3>
+              <h3 class="product__title"><a href="product-7.html">Cat Energy Slim<br> 500 г</a></h3>
               <dl class="product__info">
                 <dt>Масса</dt>
                 <dd>500 г</dd>
@@ -253,8 +256,8 @@
             <li class="extra__item">
               <h3 class="extra__item-title">Питьевая вода</h3>
               <dl class="extra__item-info">
-                <dt>5 литров</dt>
-                <dd>50 р.</dd>
+                <dt class="extra__item-information">5 литров</dt>
+                <dd class="extra__item-informations">50 р.</dd>
               </dl>
               <a class="extra__item-button button" href="extra-2.html">Заказать</a>
             </li>
@@ -279,7 +282,7 @@
           </ul>
 
           <div class="extra__action">
-            <p class="extra__text">Закажите все и получите чехол для кота в подарок!</p>
+            <p class="extra__text">Закажите все<br> и получите чехол для<br> кота в подарок!</p>
           </div>
         </div>
       </div>
@@ -295,9 +298,8 @@
           <p class="contacts__address">ул. Большая <br> Конюшенная, д. 19/8 <br> <span>Санкт-Петербург</span></p>
         </div>
       </div>
-    </section>
-    <section class="page-footer__map map">
-      <div class="map-container">
+
+      <div class="contacts__container">
         <h2 class="visually-hidden">Карта</h2>
         <picture>
           <source type="image/webp" media="(min-width: 1440px)" srcset="img/raster/map-desktop@1x.webp 1x, img/raster/map-desktop@2x.webp 2x">
@@ -306,8 +308,12 @@
 
           <source media="(min-width: 1440px)" srcset="img/raster/map-desktop@1x.png 1x, img/raster/map-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/raster/map-tablet@1x.png 1x, img/raster/map-tablet@2x.png 2x">
-          <img class="page-footer__map-image" src="img/raster/map-mobile@1x.png" srcset="img/raster/map-mobile@2x.png 2x" alt="Карта со схемой проезда">
+          <img class="contacts__map-image" src="img/raster/map-mobile@1x.png" srcset="img/raster/map-mobile@2x.png 2x" alt="Карта со схемой проезда">
         </picture>
+
+        <iframe class="contacts__interactive-map" id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.58095197757!2d30.319410323390894!3d59.93909537160517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1603140540112!5m2!1sru!2sru"
+          width="320" height="362" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        </iframe>
       </div>
     </section>
 
@@ -317,7 +323,7 @@
         <a class="page-footer__logo">
           <span class="visually-hidden">Логотип Cat Energy</span>
           <svg class="page-footer__logo-title" xmlns="http://www.w3.org/2000/svg" width="128" height="24" role="img" aria-label="Черные буквы Cat Energy">
-          <use xlink:href="img/svg/sprite/sprite.svg#footer-logo"></use>
+          <use xlink:href="img/svg/sprite.svg#footer-logo"></use>
           </svg>
         </a>
 
@@ -326,7 +332,7 @@
             <a class="social__link" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Вконтакте</span>
               <svg class="social__icon social__icon--vkontakte" xmlns="http://www.w3.org/2000/svg" width="22" height="12" role="img" aria-label="Белый логотип VK в черной обводке">
-              <use xlink:href="img/svg/sprite/sprite.svg#icon-vkontakte"></use>
+              <use xlink:href="img/svg/sprite.svg#icon-vkontakte"></use>
               </svg>
             </a>
           </li>
@@ -334,7 +340,7 @@
             <a class="social__link" href="https://www.instagram.com/htmlacademy/">
               <span class="visually-hidden">Инстаграм</span>
               <svg class="social__icon social__icon--instagram" xmlns="http://www.w3.org/2000/svg" width="16" height="16" role="img" aria-label="Белый логотип Instagram в черной обводке">
-              <use xlink:href="img/svg/sprite/sprite.svg#icon-instagram"></use>
+              <use xlink:href="img/svg/sprite.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
@@ -342,7 +348,7 @@
             <a class="social__link" href="https://www.facebook.com/htmlacademy">
               <span class="visually-hidden">Фейсбук</span>
               <svg class="social__icon social__icon--facebook" xmlns="http://www.w3.org/2000/svg" width="10" height="18" role="img" aria-label="Белый логотип facebook в черной обводке">
-              <use xlink:href="img/svg/sprite/sprite.svg#icon-facebook"></use>
+              <use xlink:href="img/svg/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
@@ -351,12 +357,12 @@
         <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="page-footer__copyright-name">HTML Academy</span>
           <svg class="page-footer__copyright-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="34" role="img" aria-label="Конфедератка выпускника">
-          <use xlink:href="img/svg/sprite/sprite.svg#icon-htmlacademy"></use>
+          <use xlink:href="img/svg/sprite.svg#icon-htmlacademy"></use>
           </svg>
         </a>
       </div>
     </section>
   </footer>
-<script src="js/menu.js"></script>
+<script src="js/menu.min.js"></script>
 </body>
 </html>

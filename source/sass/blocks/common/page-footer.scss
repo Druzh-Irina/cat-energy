@@ -2,36 +2,32 @@
   background-color: $gray;
 }
 
-.page-footer__map-image {
-  display: block;
-  margin: 0 auto;
-}
-
 .page-footer__container {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   text-align: center;
-  padding-top: 39px; // отступ секции page-footer__links от секции page-footer__map
+  padding-top: 40px; // отступ секции page-footer__links от секции page-footer__map
   padding-bottom: 22px; // отступ секции page-footer__links с сохранением фона
 
   @include tablet {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    padding-top: 55px;
-    padding-bottom: 61px;
+    padding-top: 60px;
+    padding-bottom: 53px;
   }
 
   @include desktop {
-    padding-top: 57px;
+    padding-top: 63px;
     padding-bottom: 58px;
   }
 }
 
-
 .page-footer__logo {
-  padding-bottom: 52px;
+  padding-bottom: 28px;
   border-bottom: 1px solid $medium-gray;
+  cursor: pointer;
 
   @include tablet {
     padding: 0;
@@ -52,22 +48,24 @@
   @include reset-list;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 130px;
+  width: 150px;
   padding-top: 20px;
-  padding-bottom: 21px;
+  padding-bottom: 42px;
   margin: 0 auto;
 
   @include tablet {
+    width: 180px;
     padding: 0;
+    padding-left: 35px;
   }
 }
 
 .page-footer__copyright {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 21px;
-  padding-bottom: 20px;
+  border-top: 1px solid $medium-gray;
   font-size: 16px;
   font-family: $arial;
   color: $dark-gray;
@@ -87,11 +85,34 @@
   @include tablet {
     width: 173px;
     padding: 0;
+    border: none;
+  }
+}
+
+.page-footer__copyright-name {
+  padding-top: 29px;
+  text-transform: none;
+
+  @include tablet {
+    padding: 0;
+    padding-left: 9px;
+  }
+
+  @include tablet {
+    padding-top: 3px;
+    padding-left: 10px;
   }
 }
 
 .page-footer__copyright-icon {
+  position: absolute;
+  top: 18px;
+  right: -8px;
   fill: $over-gray;
-  width: 27px;
-  height: 34px;
+  width: 43px;
+  height: 42px;
+
+  @include tablet {
+    top: -9px;
+  }
 }

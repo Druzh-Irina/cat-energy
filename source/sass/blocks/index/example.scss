@@ -1,5 +1,6 @@
 .example {
   background-color: $example-gray;
+  overflow: hidden;
 
   @include tablet {
     background-color: transparent;
@@ -9,7 +10,7 @@
   @include desktop {
     border-top: none;
     background-image:
-      linear-gradient(to bottom, $white 135px, transparent 135px),
+      linear-gradient(to bottom, $white 195px, transparent 195px),
       linear-gradient(to right, $gray 60%, $example-gray 40%);
     background-repeat: no-repeat;
     background-position: bottom, top;
@@ -42,7 +43,7 @@
 
   @include desktop {
     padding-top: 0;
-    width: 610px;
+    width: 720px;
   }
 }
 
@@ -55,11 +56,12 @@
   @include tablet {
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 63px;
+    margin-bottom: 64px;
   }
 
   @include desktop {
-    margin-bottom: 76px;
+    padding-top: 60px;
+    margin-bottom: 86px;
   }
 }
 
@@ -68,20 +70,31 @@
   margin-bottom: 25px;
   font-family: $arial;
 
+  br {
+    display: none;
+  }
+
   @include tablet {
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 54px;
+    margin-bottom: 53px;
     min-width: 700px;
-    word-spacing: 0.5px;
+
+    br {
+      display: block;
+    }
   }
 
   @include desktop {
-    padding-top: 70px;
+    padding-top: 60px;
     min-width: 0;
-    width: 440px;
+    width: 435px;
     margin: 0;
     margin-bottom: 69px;
+
+    br {
+      display: none;
+    }
   }
 }
 
@@ -89,7 +102,7 @@
   @include tablet {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 67px;
+    margin-bottom: 50px;
   }
 
   @include desktop {
@@ -124,13 +137,13 @@
   }
 
   @include desktop {
-    margin-bottom: 60px;
+    margin-bottom: 47px;
   }
 }
 
 .example__progress-result {
   position: absolute;
-  top: 15px;
+  top: 14px;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
@@ -143,20 +156,28 @@
 }
 
 .example__progress-result--block-1 {
-  left: 55px;
+  left: 42px;
+
+  @include tablet {
+    left: 56px;
+  }
 }
 
 .example__progress-result--block-2 {
-  left: 30px;
+  left: 20px;
+
+  @include tablet {
+    left: 29px;
+  }
 }
 
 .example__progress-text {
   position: absolute;
-  left: 15px;
+  left: 19px;
   top: 47px;
   width: 80px;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 6px;
+  padding-left: 7px;
   font-family: $arial;
   font-size: 12px;
   line-height: 12px;
@@ -165,12 +186,17 @@
   background-color: $example-gray;
 
   @include tablet {
-    left: 5px;
+    left: 9px;
     top: 63px;
-    width: 150px;
+    width: 140px;
     font-size: 14px;
     line-height: 14px;
     background-color: $white;
+
+    &--block-1 {
+      left: 24px;
+      width: 110px;
+    }
   }
 
   @include desktop {
@@ -192,14 +218,16 @@
     justify-content: flex-end;
     flex-wrap: wrap;
     width: 180px;
+    padding-top: 8px;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 28px;
   }
 
   @include desktop {
     justify-content: flex-end;
     flex-wrap: nowrap;
     width: 330px;
+    padding-right: 3px;
 
     .example__price-value {
       padding-left: 63px;
@@ -208,13 +236,13 @@
 }
 
 .example__slider {
-  padding-bottom: 31px; // отступ до конца фона в блоке example
+  padding-bottom: 32px; // отступ до конца фона в блоке example
 
   @include tablet {
     padding-bottom: 70px;
   }
 
   @include desktop {
-    width: 790px;
+    width: 720px;
   }
 }
