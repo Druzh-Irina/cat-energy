@@ -47,7 +47,7 @@
   &:active:invalid,
   &:focus:invalid,
   &.invalid {
-    border: 2px solid $red;
+    outline: 2px solid $red;
 
     ~ .field-text__icon {
       fill: $red;
@@ -101,7 +101,7 @@
   .field-text__input {
     min-height: 150px;
     padding: 5px 13px;
-    resize: none;
+    resize: vertical;
 
     @include tablet {
       min-height: 174px;
