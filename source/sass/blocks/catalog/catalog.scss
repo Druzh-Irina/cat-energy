@@ -12,7 +12,7 @@
 
   @include tablet {
     padding: 0 30px;
-    margin-bottom: 68px;
+    margin-bottom: 69px;
   }
 
   @include desktop {
@@ -25,20 +25,20 @@
   @include caption;
   @include catalog-container;
   padding-top: 27px;
-  margin-bottom: 41px;
+  margin-bottom: 40px;
   font-size: 36px;
   line-height: 36px;
 
   @include tablet {
-    padding-top: 65px;
-    margin-bottom: 190px;
+    padding-top: 37px;
+    margin-bottom: 31px;
     font-size: 60px;
     line-height: 60px;
   }
 
   @include desktop {
-    padding-top: 78px;
-    margin-bottom: 180px;
+    padding-top: 51px;
+    margin-bottom: 32px;
   }
 }
 
@@ -57,7 +57,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   border-bottom: 1px solid $ultra-gray;
-  padding: 0 20px 25px; // возвращает границы container
+  padding: 0 20px 24px; // возвращает границы container
 
   &:first-of-type {
     border-top: 1px solid $ultra-gray;
@@ -69,7 +69,7 @@
 
   @include tablet {
     width: 45.75%;
-    margin-bottom: 140px;
+    margin-bottom: 8px;
     padding: 0;
     border: none;
 
@@ -83,7 +83,7 @@
   @include desktop {
     width: 20%;
     margin-right: 80px;
-    margin-bottom: 150px;
+    margin-bottom: 10px;
 
     &:nth-child(4n) {
       margin-right: 0;
@@ -98,13 +98,17 @@
 
 .catalog__wrapper {
   padding-top: 19px;
-  margin-bottom: 22px;
+  margin-bottom: 23px;
   width: 50%;
 
   @include tablet {
     padding-top: 0;
-    margin-bottom: 0;
+    margin-bottom: -2px;
     width: 100%;
+  }
+
+  @include desktop {
+    margin-bottom: 1px;
   }
 }
 

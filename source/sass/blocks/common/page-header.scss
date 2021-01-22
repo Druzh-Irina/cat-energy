@@ -33,7 +33,7 @@ $gradient: linear-gradient(rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px; // отступ от блока page-header наверх
+    padding-top: 19px; // отступ от блока page-header наверх
     padding-bottom: 20px;
   }
 
@@ -48,7 +48,7 @@ $gradient: linear-gradient(rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85
   align-items: center;
   height: 45px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   box-sizing: content-box;
 
   &:hover {
@@ -58,17 +58,19 @@ $gradient: linear-gradient(rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85
   &:active {
     opacity: 0.6;
   }
+
+  @include tablet {
+    padding-bottom: 10px;
+  }
 }
 
-.page-header__logo::before {
-  content: "";
+.page-header__logo-title {
+  margin: auto;
   position: absolute;
-  min-width: 101px;
-  min-height: 18px;
-  left: 42%;
-  background-image: url("../img/svg/header-logo.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  left: 0;
+  right: 0;
+  top: 5px;
+  bottom: 0;
 
   @include tablet {
     display: none;
@@ -81,10 +83,10 @@ $gradient: linear-gradient(rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85
 
   @include tablet {
     width: 173px;
-    height: 59px;
+    height: 58px;
   }
 
-  @include tablet {
+  @include desktop {
     width: 202px;
     height: 60px;
   }
