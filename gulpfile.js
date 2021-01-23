@@ -21,6 +21,7 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
+    .pipe(gulp.dest("build/css"))
     .pipe(postcss([
       autoprefixer(),
       csso()
@@ -80,10 +81,10 @@ const createWebP = () => {
 // Sprite
 
 const sprite = () => {
-  return gulp.src("source/img/svg/*.svg")
+  return gulp.src("source/img/svg/sprite/*.svg")
   .pipe(svgstore())
   .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("build/img"))
+  .pipe(gulp.dest("build/img/svg"))
 }
 
 exports.sprite = sprite;
