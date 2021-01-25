@@ -100,9 +100,12 @@
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
+    width: 510px;
+    padding-top: 16px;
 
     .main-nav__item {
       margin-left: 36px;
+      padding-bottom: 10px;
     }
 
     &:first-child {
@@ -111,7 +114,8 @@
   }
 
   @include desktop {
-    padding-top: 1px;
+    padding-top: 10px;
+    width: 610px;
   }
 }
 
