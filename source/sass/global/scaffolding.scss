@@ -39,7 +39,6 @@ a {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
-  min-height: 100%; // футер прибит книзу по рекомендации наставника, проверяющего на защите на первой проверке
 }
 
 .container {
